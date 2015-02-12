@@ -1,0 +1,640 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"alph",
+				"alphabet_name_sort"
+			],
+			[
+				"stud",
+				"StudentOrganizer"
+			],
+			[
+				"orga",
+				"organized_names"
+			],
+			[
+				"S",
+				"student_names"
+			],
+			[
+				"cookie",
+				"cookies_from_file"
+			],
+			[
+				"Pean",
+				"PeanutCookie"
+			],
+			[
+				"cook",
+				"cookie_1"
+			],
+			[
+				"true",
+				"true"
+			],
+			[
+				"get",
+				"getAverage"
+			],
+			[
+				"array",
+				"arrayOfScores"
+			],
+			[
+				"tes",
+				"testScores"
+			],
+			[
+				"Add",
+				"addScore"
+			],
+			[
+				"see",
+				"seedlings"
+			],
+			[
+				"ga",
+				"gaeaStatus"
+			],
+			[
+				"forest",
+				"forestStatus"
+			],
+			[
+				"hi",
+				"hippyTears"
+			],
+			[
+				"hy",
+				"hydrationStatus"
+			],
+			[
+				"number",
+				"numberOfSeeds"
+			],
+			[
+				"numbe",
+				"numberOfSeeds"
+			],
+			[
+				"num",
+				"numberOfSeeds"
+			],
+			[
+				"clean",
+				"clean_silverware"
+			],
+			[
+				"dia",
+				"diagonal_2"
+			],
+			[
+				"doubl",
+				"double_every_other"
+			],
+			[
+				"i",
+				"i"
+			],
+			[
+				"align",
+				"vertical-align"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "Planning - Schema, Models, and Features.md",
+			"settings":
+			{
+				"buffer_size": 2655,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 357.0,
+		"selected_items":
+		[
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"table editor",
+				"Table Editor: Enable for current syntax"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"previe",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"previ",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"pre",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"user",
+				"Preferences: Settings - User"
+			],
+			[
+				"settings",
+				"Preferences: Package Control Settings – Default"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"seeing is",
+				"Seeing Is Believing: Evaluate Marked Lines"
+			],
+			[
+				"seeing is ",
+				"Seeing Is Believing: Evaluate"
+			],
+			[
+				"seeing",
+				"Seeing Is Believing: Evaluate"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"markdown",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"m",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"markd",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"",
+				"About"
+			],
+			[
+				"markdon",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdown preview pre",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdown pre",
+				"Markdown Preview: Preview in Browser"
+			]
+		],
+		"width": 536.0
+	},
+	"console":
+	{
+		"height": 51.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/Users/Adell/Documents/DBC/phase-2 (!!)/week-1/ph2-pA-week-1-passion-project/app/models/shoe.rb",
+		"/C/Users/Adell/Documents/DBC/phase-2 (!!)/week-1/ph2-pA-week-1-passion-project/app/models/user.rb",
+		"/C/Users/Adell/Documents/DBC/phase-2 (!!)/week-1/ph2-pA-week-1-passion-project/app/models/vote.rb",
+		"/C/Users/Adell/Documents/DBC/phase-2 (!!)/week-1/ph2-pA-week-1-passion-project/db/migrate/20150205195530_create_votes.rb",
+		"/C/Users/Adell/Documents/DBC/phase-2 (!!)/week-1/ph2-pA-week-1-passion-project/db/migrate/20150205194748_create_foot_profiles.rb",
+		"/C/Users/Adell/Documents/DBC/phase-2 (!!)/week-1/ph2-pA-week-1-passion-project/db/migrate/20150205194725_create_shoes.rb",
+		"/C/Users/Adell/Documents/DBC/phase-2 (!!)/week-1/ph2-pA-week-1-passion-project/db/migrate/20150205194733_create_reviews.rb",
+		"/C/Users/Adell/Documents/DBC/phase-2 (!!)/week-1/ph2-pA-week-1-passion-project/app/models/foot_profile.rb",
+		"/C/Users/Adell/Documents/DBC/phase-2 (!!)/week-1/ph2-pA-week-1-passion-project/app/models/review.rb",
+		"/C/Users/Adell/Documents/DBC/phase-2 (!!)/week-1/ph2-pA-week-1-passion-project/db/migrate/20150205194741_create_users.rb",
+		"/C/Users/Adell/Documents/DBC/phase-2 (!!)/week-1/ph2-pA-week-1-passion-project/Planning - Schema, Models, and Features.md",
+		"/C/Users/Adell/Documents/DBC/phase-2 (!!)/week-1/passion-project-a/db/migrate/20150205120043_create_users.rb",
+		"/C/Users/Adell/Documents/DBC/phase-2 (!!)/week-1/passion-project-a/README.md",
+		"/C/users/Adell/Documents/DBC/phase-2 (!!)/week-1/sinatra-url-shortener-challenge/Gemfile",
+		"/C/users/Adell/Documents/DBC/phase-2 (!!)/week-1/sinatra-url-shortener-challenge/gemfile.lock",
+		"/C/users/Adell/Documents/DBC/phase-2 (!!)/week-1/sinatra-url-shortener-challenge/Rakefile",
+		"/C/tools/eventmachine/ext/fastfilereader/extconf.rb",
+		"/C/tools/eventmachine/ext/extconf.rb",
+		"/C/tools/eventmachine-1.0.3/ext/fastfilereader/extconf.rb",
+		"/C/tools/eventmachine-1.0.3/ext/extconf.rb",
+		"/C/Users/Adell/Documents/DBC/phase-2 (!!)/week-1/passion-project-a/Planning - Schema, Models, and Features.md",
+		"/C/tools/Ruby200-x64/lib/ruby/gems/2.0.0/gems/eventmachine-1.0.3/ext/project.h",
+		"/C/tools/Ruby200-x64/lib/ruby/gems/2.0.0/gems/eventmachine-1.0.3/ext/fastfilereader/extconf.rb",
+		"/C/Ruby-DevKit-mingw64-64-4.7.2-20130224-1432/dk.rb",
+		"/C/Users/Adell/Documents/DBC/phase-1-unit-1/week-3/burrito_generator/models/burrito_generator.rb",
+		"/C/Users/Adell/Documents/DBC/phase-1-unit-1/week-3/burrito_generator/burrito_generator.rb",
+		"/C/Users/Adell/Documents/eyecatchers.me/public_html/css/custom.css",
+		"/C/Users/Adell/Documents/eyecatchers.me/public_html/index.html",
+		"/C/Users/Adell/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Adell/Documents/Ionic/tabApps/www/index.html",
+		"/C/Users/Adell/Documents/Ionic/tabApps/hooks/README.md",
+		"/C/Users/Adell/Documents/DBC/phase-1-unit-1/week-2/orange-tree-1-just-oranges-rspec-challenge/source/orange_tree.rb",
+		"/C/Users/Adell/Documents/DBC/phase-1-unit-1/week-2/orange-tree-1-just-oranges-rspec-challenge/source/orange_tree_spec.rb",
+		"/C/Users/Adell/AppData/Roaming/npm/node_modules/ionic/bin/ionic",
+		"/C/Users/Adell/Documents/DBC/phase-1-unit-1/week-2/ruby-flashcards-1-single-deck-challenge/source/flashcards.rb",
+		"/C/Users/Adell/Documents/DBC/phase-1-unit-1/week-1/ruby-todos-1-0-core-features-challenge/source/todo_controller.rb",
+		"/C/Users/Adell/Documents/DBC/phase-1-unit-1/week-1/ruby-todos-1-0-core-features-challenge/source/todo_list.txt",
+		"/C/Users/Adell/Documents/DBC/phase-1-unit-1/week-1/ruby-todos-1-0-core-features-challenge/source/todo_model.rb",
+		"/C/Users/Adell/Documents/DBC/phase-1-unit-1/week-1/ruby-todos-1-0-core-features-challenge/source/todo_tests.rb",
+		"/C/Users/Adell/AppData/Roaming/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Users/Adell/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Adell/Documents/DBC/phase-1-unit-1/week-1/ruby-todos-1-0-core-features-challenge/source/pseudocode.txt",
+		"/C/Users/Adell/Documents/DBC/phase-1-unit-1/week-1/cookies.txt",
+		"/C/Users/Adell/Documents/DBC/phase-1-unit-1/week-1/cookie_factory_r0.rb",
+		"/C/Users/Adell/Documents/DBC/phase-1-unit-1/week-1/design-drill-object-composition-challenge/cookie_factory.rb",
+		"/C/Users/Adell/Documents/DBC/phase-1-unit-1/week-1/cookies-and-ovens.rb",
+		"/C/Users/Adell/Documents/DBC/phase-1-unit-1/week-1/design-drill-classical-inheritance-challenge/danimals.rb",
+		"/C/Users/Adell/Documents/DBC/phase-1-unit-1/week-1/sudoku-1-modeling-logic-challenge/source/sudoku.rb",
+		"/C/Users/Adell/Documents/DBC/phase-1-unit-1/week-1/sudoku-1-modeling-logic-challenge/board_images/printable_board.pdf",
+		"/C/Users/Adell/Documents/DBC/phase-1-unit-1/week-1/todo_list(testing example).rb",
+		"/C/Users/Adell/Documents/DBC/phase-1-unit-1/week-1/todo_list_spec.rb",
+		"/C/Users/Adell/documents/dbc/phase-1-unit-1/week-1/design-drill-method-chaining-challenge/source/method_chaining.rb",
+		"/C/Users/Adell/AppData/Roaming/Sublime Text 2/Packages/User/Ruby.sublime-settings",
+		"/C/Users/Adell/AppData/Roaming/Sublime Text 2/Packages/User/JSON.sublime-settings",
+		"/C/Users/Adell/Documents/DBC/phase-0-unit-3/ruby/fizz-buzz/my_solution.rb",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-9/2-JavaScript/translate-to-js/README.md",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-9/2-JavaScript/translate-to-js/my_solution.js",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-9/2-JavaScript/jquery/jquery_example.js",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-9/2-JavaScript/groceryList/README.md",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-9/2-JavaScript/jquery/README.md",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-9/2-JavaScript/jquery/jquery_example.html",
+		"/C/Users/Adell/Documents/DBC/phase-0-unit-3/ruby/rectangle-class/README.md",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-9/3-ruby.md",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-9/1-professional-blog.md",
+		"/C/Users/Adell/Downloads/Release.txt",
+		"/C/Users/Adell/documents/DBC/phase-0-unit-3/week-8/9-gps3-2/our_solution.js",
+		"/C/Users/Adell/Documents/DBC/adellhk.github.io/blog/c8-conflict.html",
+		"/C/Users/Adell/Documents/DBC/adellhk.github.io/blog/c5-feedback.html",
+		"/C/Users/Adell/Documents/DBC/adellhk.github.io/blog/t8-tech.html",
+		"/C/Users/Adell/documents/DBC/phase-0-unit-3/week-8/7-technical-blog.md",
+		"/C/Users/Adell/Documents/DBC/adellhk.github.io/blog/c7-values.html",
+		"/C/Users/Adell/documents/DBC/phase-0-unit-3/week-8/5-ruby.md",
+		"/C/Users/Adell/documents/DBC/phase-0-unit-3/week-8/3-js-gradebook/README.md",
+		"/C/Users/Adell/documents/DBC/phase-0-unit-3/week-8/3-js-gradebook/my_solution.js",
+		"/C/Users/Adell/documents/DBC/phase-0-unit-3/week-8/4-js-tally-votes/my_solution.js",
+		"/C/Users/Adell/Documents/DBC/phase-0-unit-3/week-7/4-manipulating-js-objects/my_solution.js",
+		"/C/Users/Adell/documents/DBC/phase-0-unit-3/week-8/4-js-tally-votes/README.md",
+		"/C/Users/Adell/Documents/DBC/adellhk.github.io/stylesheets/blog_template_stylesheet.css",
+		"/C/Users/Adell/Documents/DBC/adellhk.github.io/stylesheets/cheat-sheet.css",
+		"/C/Users/Adell/Documents/DBC/adellhk.github.io/cheat-sheet.html",
+		"/C/Users/Adell/Documents/DBC/adellhk.github.io/portfolio.html",
+		"/C/Users/Adell/documents/DBC/phase-0-unit-3/week-8/6-cheat-sheet.md",
+		"/C/Users/Adell/Documents/DBC/phase-0-unit-3/week-8/4-js-tally-votes/test.js",
+		"/C/Users/Adell/Documents/DBC/phase-0-gps-1/awesome_page.md",
+		"/C/Users/Adell/Documents/DBC/adellhk.github.io/9-gps1-2/gps1-2.html",
+		"/C/Users/Adell/Documents/DBC/adellhk.github.io/blog/t4-enumerable-methods.html",
+		"/C/Users/Adell/Documents/DBC/adellhk.github.io/cheat-sheat.html",
+		"/C/Users/Adell/Documents/DBC/adellhk.github.io/blog/t2-css-design.html",
+		"/C/Users/Adell/documents/DBC/phase-0-unit-3/week-8/2-more-schemas/README.md",
+		"/C/Users/Adell/documents/DBC/phase-0-unit-3/week-8/2-more-schemas/my_solution.md",
+		"/C/Users/Adell/Documents/DBC/phase-0-unit-3/week-7/9-gps3-1/our_solution.rb",
+		"/C/Users/Adell/Documents/DBC/phase-0-unit-3/week-9/2-JavaScript/groceryList/my_solution.js",
+		"/C/Users/Adell/documents/DBC/phase-0-unit-3/week-8/1-intro-to-databases/README.md",
+		"/C/Users/Adell/documents/DBC/phase-0-unit-3/week-8/1-intro-to-databases/my_solution.md",
+		"/C/Users/Adell/documents/DBC/phase-0-unit-3/week-8/1-intro-to-databases/conventions.md",
+		"/C/Users/Adell/documents/DBC/phase-0-unit-3/week-8/README.md",
+		"/C/Users/Adell/Documents/DBC/phase-0-unit-3/week-8/1-intro-to-databases/conventions.md",
+		"/D/Downloads/Warez/DxO Optics Pro 10.0.0 Build 821 Elite Multilingual (x64) + Patch/Patch/Instructions.txt",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-7/7-technical-blog.md",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-7/6-group-project/my_solution.js",
+		"/C/Users/Adell/Documents/DBC/adellhk.github.io/blog/t7-JavaScript.html",
+		"/C/Users/Adell/Documents/DBC/adellhk.github.io/blog/c6-stereotype-threat.html",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-7/4-manipulating-js-objects/README.md",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-7/5-design-cc-mission-solo-challenge/README.md",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-7/5-design-cc-mission-solo-challenge/my_solution.js",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-7/6-group-project/README.md",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-7/6-group-project/tests.js",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-7/4-manipulating-js-objects/my_solution.js",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-7/3-js-variables-objects/README.md",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-7/3-js-variables-objects/my_solution.js",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-7/2-eloquent-js/javascript_notes.md",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-7/2-eloquent-js/README.md",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-7/2-eloquent-js/my_solutions.js",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-7/9-gps3-1/README.md",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-7/9-gps3-1/our_solution.rb",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-7/1-code-combat/README.md",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-3/week-7/1-code-combat/my_solution.js",
+		"/C/Users/Adell/Documents/DBC/phase-0-unit-2/week-5/6-validate-credit-card/my_solution.rb",
+		"/C/Users/Adell/Documents/DBC/phase-0-unit-2/week-4/5-nums-commas-solo-challenge/my_solution.rb",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-2/week-6/10-BONUS-challenges/assert-statements/my_solution.rb",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-2/week-6/1-drawer-debugger/README.md",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-2/week-6/5-refactoring/my_solution.rb",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-2/week-6/5-refactoring/readme.md",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-2/week-6/10-BONUS-challenges/assert-statements/README.md",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-2/week-6/1-drawer-debugger/my_solution.rb",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-2/week-6/4-bingo-2-solo-challenge/my_solution.rb",
+		"/C/Users/Adell/Documents/DBC/phase-0-unit-1/week-3/exercises/12-smallest-integer/my_solution.rb",
+		"/C/Users/Adell/documents/dbc/phase-0-unit-2/week-6/8-gps2-2/my_solution.rb"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"C:\\Users\\Adell\\Documents\\,C:\\Users\\Adell\\Documents\\DBC\\adellhk.github.io",
+			"C:\\Users\\Adell\\Documents\\,C:\\Users\\Adell\\Documents\\eyecatchers.me\\grokphoto-master",
+			"C:\\Users\\Adell\\Documents\\DBC",
+			"C:\\Users\\Adell\\Documents\\DBC\\adellhk.github.io\\blog"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Comments",
+			"user",
+			"-",
+			"p ",
+			"names",
+			"focus",
+			"gluten",
+			"[",
+			"3351",
+			"3246",
+			"3230",
+			"Kanako Gage",
+			"12/14",
+			"book now",
+			"height=\"375\" width=\"300\"",
+			"commercial",
+			"11/25/14",
+			"Ben Owen",
+			"console.log",
+			"text = ",
+			"text =",
+			"Johnoveau is",
+			"gaea",
+			"\"Bingo!\"",
+			"\"Next\"<",
+			"\"file\"",
+			"Proc",
+			"Bloc",
+			"Lambda",
+			"lambda",
+			"proc",
+			" [",
+			"$arr",
+			"1/24",
+			"329",
+			"Ben Owen",
+			"Eyecatchers2014",
+			"328",
+			" Look",
+			"Corporate",
+			"comemrcial",
+			"\"CHameria Law",
+			"Friendly ",
+			"personal commercial",
+			"</u>",
+			"<u>",
+			"</b>",
+			"<b>",
+			"message",
+			"argumentError",
+			"hungry_mouths",
+			"coded_let",
+			" x",
+			"num_of_foo",
+			"remainder",
+			"about",
+			"adell",
+			"</inline-pre>",
+			"<inline-pre>",
+			"block",
+			"pre>",
+			"arr",
+			"\"",
+			" \",",
+			"324-1-2",
+			"324-",
+			"services",
+			"col-md-3 col-xs-6",
+			"price",
+			"\">\n",
+			"bcrypt",
+			"growth mindset",
+			"href=\"portfolio",
+			"shortest_word",
+			"src=\"../imgs",
+			"src=\"..imgs",
+			"src=\"imgs",
+			"src=\"../imgs\"",
+			"src=\"imgs",
+			"src=\"imgs\"",
+			"your",
+			"public"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"review",
+			"*",
+			"3460-edit",
+			"3351",
+			"3358",
+			"Randy Kusharsky",
+			"12/16",
+			"",
+			"On-Location",
+			"12/14/14",
+			"Kanako Gage",
+			"return",
+			"console.log(",
+			"You are",
+			"gaeaStatus",
+			"true",
+			"Next<",
+			"proc",
+			"bloc",
+			"lambda",
+			"Lambda",
+			"Proc",
+			" @board[",
+			"@arr",
+			"1/21",
+			"1/25",
+			"325",
+			"Naomi Mack",
+			"Eyecatchers-2014",
+			"329",
+			"",
+			"Commercial",
+			"\"Ben Owen",
+			"",
+			"Lifestyle",
+			"</i>",
+			"<i>",
+			"</u>",
+			"<u>",
+			"massage",
+			"num_of_people",
+			" coded_letter",
+			"hungry_mouths",
+			"",
+			"<inline-pre>block</inline-pre>",
+			"inline-pre>",
+			"result",
+			"",
+			"col-lg-2 col-md-3 col-sm-4 col-xs-6",
+			"service",
+			"href=\"../portfolio",
+			"longest_string",
+			"src=\"/imgs",
+			"src=\"../imgs",
+			"src=\"../imgs\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Planning - Schema, Models, and Features.md",
+					"settings":
+					{
+						"buffer_size": 2655,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 40.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.5,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 297.0
+	},
+	"replace":
+	{
+		"height": 252.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 342.0,
+	"status_bar_visible": true
+}

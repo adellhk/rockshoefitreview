@@ -1,0 +1,11 @@
+<div id="shoe">
+  <h3 class="title"><%= @shoe.brand + " " + @shoe.model %></h3>
+  <img src="/imgs/shoes/<%= @shoe.image_path %>_Large.jpg" width="100%">
+  <a href="/shoes/<%= @shoe.id %>/new_review">Write a new review for the <%= @shoe.brand + " " + @shoe.model %></a>
+  <% @shoe.reviews.each do |review| %>
+  <div class="review">
+  <p><span style="font-size:.8em;"><%= review.updated_at %> <% author_name = User.find(review.author_id).username %><a href="../users/<%= author_name %>"><%= author_name %></a></span><br>
+  <%= review.message %></p>
+</div>
+  <% end %>
+</div>

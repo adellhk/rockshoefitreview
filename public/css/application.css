@@ -1,0 +1,183 @@
+html,
+body {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+#container {
+  margin: auto;
+  position: relative;
+  min-height: auto;
+  width: auto;
+  background: white;
+  opacity: .8;
+  display: block;
+  text-align: center;
+}
+.content {
+  padding-top: 15%;
+  /*margin-top: 3em;*/
+  min-height: auto;
+}
+th {
+  text-align: left;
+}
+
+a.button {
+  background: rgb(225,124,123);
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+  border-radius: 10px;
+}
+
+div.header {
+  background: rgb(149,82,81);
+  height: 45px;
+  width: 100%;
+  position: relative;
+}
+
+div.central {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  height: 400px;
+  margin-left: -300px;
+  width: 600px;
+  text-align: center;
+}
+
+div#searchResults {
+border: 1px solid black;
+bottom: 25%;
+position: fixed;
+width: 400px;
+margin-left: calc(50% - 200px);
+padding: 10px;
+}
+
+div.results {
+  height: 50px;
+  border: 1px solid black;
+border-radius: 5px;
+width: 25%;
+margin: 10px;
+}
+
+#footer {
+  position: absolute;
+  width: 100%;
+  height: 3em;
+  background: rgba(9, 41, 2, 1);
+}
+
+#new_user {
+  margin-top: 15em;
+}
+
+#shoes {
+  text-align: left;
+  font-size: 2em;
+}
+a {
+  color: #030F01;
+}
+a:hover {
+  color: #BEB04B;
+}
+@font-face {
+  font-family: 'LeagueGothicRegular';
+  src: url(../../imgs/League-Gothic/LeagueGothic-Regular.otf);
+}
+.title{
+  text-shadow: 0px 1px 1px rgba(2,8,0,0.5);
+  color: rgba(8,38,2,0.5);
+  font-family: 'LeagueGothicRegular';
+  font-size: 5em;
+  margin-top: 0; margin-bottom: 0;
+}
+.title:hover{
+  color: rgba(8,38,2,1);
+}
+.subtitle{
+  text-shadow: 0px 1px 1px #1C9A16;
+  color: #1C8B16;
+  font-family: 'LeagueGothicRegular';
+  font-size: 3em;
+}
+#navbar {
+  margin: auto;
+  position: relative;
+  height: 100%;
+  /*min-height: 100%;*/
+  width: 75%;
+  background: rgba(9, 41, 2, 0.6);
+  opacity: .8;
+  display: block;
+  /*padding: 0px 20px 20px 20px;*/
+}
+#navbar a,p{
+  color: beige;
+}
+#navbar a:hover{
+  color: #BEB04B;
+}
+.review {
+  color: rgba(8,38,2,0.5);
+
+  margin:auto;
+  width:90%;
+  /*background: rgba(9, 41, 2, 0.6);*/
+  border-radius: 5px;
+  border: 2px solid rgb(9,41,2);
+  margin-bottom: 3em;
+  font-size: 1.5em;
+}
+#shoe p {
+  text-align: left;
+  font-size: 1.25em;
+}
+
+.shoe_pane {
+  position:relative;
+  width: 10em;
+}
+.shoe_pane img{
+  width: 100%;
+  display: inline-block;
+}
+.shoe_pane:after {
+  position:absolute;
+  width:100%; height:100%;
+  top:0; left:0;
+  background:rgba(0,0,0,0.6);
+  opacity:0;
+  transition: all 1s;
+  -webkit-transition: all 1s;
+}
+.shoe_pane:hover:after {
+  opacity: 1;
+}
+
+#shoes {
+  text-align: center;
+}
+.shoe_pane a {
+  font-size: .7em;
+  text-decoration: none;
+}
+#shoe_table {
+  margin:auto;
+}
+
+.thumbnail {
+  width: 10%;
+  border-radius: 5px;
+}
+/*https://color.adobe.com/create/color-wheel/?base=2&rule=Analogous&selected=2&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.9035260443526146,0.9038915488332979,0.903921568627451,0.06463399171987551,0.6939215686274509,0.39354344846038036,0.10959220363431856,0.6039215686274509,0.086447193010976,0.5263261507257542,0.6939215686274509,0.06463399171987551,0.7290196078431372,0.6754610157794895,0.2904771081896126&swatchOrder=0,1,2,3,4*/
