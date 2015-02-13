@@ -42,12 +42,9 @@ $(document).ready(function() {
       $('#shoePages').append(shoePage);
 
 
-    })
-
-  //   //fail(function(){
-  //   //   console.log('Failed')
-  //   // })
-  // });
+    }).fail(function(){
+      console.log('Failed')
+    });
   });
 
 });
