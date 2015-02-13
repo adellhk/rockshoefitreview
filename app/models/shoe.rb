@@ -5,12 +5,12 @@ class Shoe < ActiveRecord::Base
     self.display_name = self.brand + " " + self.model
   end
 
-  def image_path
-    path = generate_display_name
-    path.gsub(" ", "-").gsub("\'", "")
+  def generate_image_path
+    path = generate_display_name.gsub(" ", "_").gsub("'", "")
+    self.image_url = ("imgs/shoes/" + path)
   end
 
-  before_save :generate_display_name
+  before_save :generate_display_name, :generate_image_path
 
 
 end

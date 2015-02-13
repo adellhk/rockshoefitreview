@@ -14,21 +14,24 @@ end
 #   erb :shoe_instance
 # end
 # # get a form to edit a specific instance of shoes
-get '/shoes/:id/new_review' do
-  session[:last_shoe_id] = params[:id]
-  redirect '/reviews/new'
-end
 
 get '/shoes/:display_name' do
-  keywords = params[:display_name].split(" ").map!{|word| "%"+word+"%"}
-  matches = Shoe.where('display_name ilike any ( array[?] )', keywords)
-  matches.to_json
+  # shoe = Shoe.find_by(display_name: params[:display_name])
+  @shoe = Shoe.find_by(display_name: params[:display_name])
+  content_type :json
+  @shoe.to_json
+  # erb :shoe_instance
+end
+
+get '/shoes/:display_name/new_review' do
+  session[:last_shoe_id] = params[:id]
+  redirect '/reviews/new'
 end
 
 get '/shoesearch' do
   keywords = params[:shoeBarInput].split(" ").map!{|word| "%"+word+"%"}
   @matches = Shoe.where('display_name ilike any ( array[?] )', keywords)
-  erb :shoe_list, layout: false
+  erb :search_results, layout: false
 end
 # # edit a specific instance of shoes
 # put '/shoes/:id' do

@@ -1,6 +1,6 @@
 <div id="shoe">
   <h3 class="title"><%= @shoe.brand + " " + @shoe.model %></h3>
-  <img src="/imgs/shoes/<%= @shoe.image_path %>_Large.jpg" width="100%">
+  <img src="../<%= @shoe.image_url %>_Large.jpg" width="100%">
   <a href="/shoes/<%= @shoe.id %>/new_review">Write a new review for the <%= @shoe.brand + " " + @shoe.model %></a>
   <% @shoe.reviews.each do |review| %>
   <div class="review">

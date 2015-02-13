@@ -24,6 +24,6 @@ end
 
 def generate_reviews(num_reviews = 104)
   num_reviews.times do
-    Review.create(author_id: [*1..10].sample, message: Faker::Lorem.sentences(3), shoe_id: [*1..12].sample, fits: [true, false].sample)
+    Review.create(author_id: [*1..10].sample, message: Faker::Lorem.sentences(3).flatten.join(" "), shoe_id: [*1..12].sample, fits: [true, false].sample)
   end
 end

@@ -93,6 +93,20 @@
 
 
 to-do:
+2.12
+A user starts to search and after three chars have been entered:
+  A results Div is appended and slides up, with results in it.
+    Results div has a 'banish' button
+  As search is narrowed, results are grayed out.
+  If a search is ever narrowed down to one result, the "Rock Shoe Size Review" button glows & clicking it or pressing enter will take you to that result's profile page partial.
+A user can click on a search result
+  Page slides down, preserving search results, to display shoe's profile page partial.
+
+If a user makes a search that returns nothing, results div says "no matches, try a different shoe."
+
+* All Shoes Button
+* Trending Reviews button
+
 2.8
 add "review written XXX ago" counter
 add error handling & validations
