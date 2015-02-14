@@ -5,17 +5,6 @@ body {
   padding: 0;
   margin: 0;
 }
-
-#container {
-  margin: auto;
-  position: relative;
-  min-height: auto;
-  width: auto;
-  background: white;
-  opacity: .8;
-  display: block;
-  text-align: center;
-}
 .content {
   padding-top: 15%;
   /*margin-top: 3em;*/
@@ -24,18 +13,23 @@ body {
 th {
   text-align: left;
 }
-a.button {
-  background: rgb(225,124,123);
+div.central a.button {
+  background: #955251;
   color: white;
   padding: 20px;
   text-decoration: none;
   display: inline-block;
   font-size: 50px;
   border-radius: 10px;
+  margin-bottom: 10px;
+}
+div.central a.button:hover {
+  box-shadow: 1px 1px 1px 1px #482120;
+  /*color: #E19291;*/
 }
 
 div.header {
-  background: rgb(149,82,81);
+  background: #482120;
   height: 45px;
   width: 100%;
   position: relative;
@@ -46,25 +40,27 @@ div.central {
   top: 50%;
   left: 50%;
   margin-top: -200px;
-  height: 400px;
   margin-left: -300px;
   width: 600px;
   text-align: center;
+  border: 3px double black;
 }
 
 div#searchResults {
   border: 1px solid black;
-  bottom: 25%;
-  position: fixed;
-  width: 400px;
-  margin-left: calc(50% - 210px);
-  padding: 10px;
+  background: yellow;
+  position: relative;
+}
+div#searchResults span.model-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 div.results {
   float: left;
   height: 50px;
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   border-radius: 5px;
   width: 25%;
   margin: 10px;
@@ -72,7 +68,9 @@ div.results {
   max-width: 50px;
   background-repeat:no-repeat;
   background-size: 100%;
+  position: relative;
 }
+
 div#searchResults img {
   position: relative;
   max-width: 50px;
@@ -88,11 +86,11 @@ div#searchResults img {
   padding: 5px;
   margin-top: -5px;
   margin-left: -5px;
-  font-size: 10px;
+  font-size: small;
 }
 
 #shoePages {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 90%;
   height: 1px;
@@ -114,24 +112,27 @@ div#searchResults img {
   text-align: left;
   font-size: 2em;
 }
+
 a {
-  color: #030F01;
+  text-decoration: none;
+  color: #482120;
 }
 a:hover {
-  color: #BEB04B;
+  color: #E19291;
 }
 @font-face {
   font-family: 'LeagueGothicRegular';
   src: url(../../imgs/League-Gothic/LeagueGothic-Regular.otf);
 }
-.title{
+div.shoe-instance span.title{
   text-shadow: 0px 1px 1px rgba(2,8,0,0.5);
-  color: rgba(8,38,2,0.5);
+  color: #2B4C62;
   font-family: 'LeagueGothicRegular';
   font-size: 5em;
   margin-top: 0; margin-bottom: 0;
+  display: inline-block;
 }
-.title:hover{
+div.shoe-instance span.title:hover{
   color: rgba(8,38,2,1);
 }
 .subtitle{
@@ -151,27 +152,33 @@ a:hover {
   display: block;
   /*padding: 0px 20px 20px 20px;*/
 }
-#navbar a,p{
+/*#navbar a,p{
   color: beige;
 }
 #navbar a:hover{
   color: #BEB04B;
-}
+}*/
 .review {
   color: rgba(8,38,2,0.5);
   margin:auto;
-  width:90%;
+  width:25%;
+  display: inline-block;
   /*background: rgba(9, 41, 2, 0.6);*/
   border-radius: 5px;
   border: 2px solid rgb(9,41,2);
   margin-bottom: 3em;
-  font-size: 1.5em;
 }
-#shoe p {
+div.shoe-instance {
+  width: 90%;
+  border: 1px solid black;
+}
+div.shoe-instance p {
   text-align: left;
-  font-size: 1.25em;
+  font-size: 12px;
 }
-
+div.shoe-instance img {
+  width:25%;
+}
 .shoe_pane {
   position:relative;
   width: 10em;
@@ -209,5 +216,14 @@ a:hover {
   border-radius: 5px;
 }
 
+/*MARSALA:
+marsala 955251
+dark red 482120
+pink E19291
+dark green 194828
+light green 519566
+light blue 6FB2E1
+dark blue 2B4C62
 
-/*https://color.adobe.com/create/color-wheel/?base=2&rule=Analogous&selected=2&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.9035260443526146,0.9038915488332979,0.903921568627451,0.06463399171987551,0.6939215686274509,0.39354344846038036,0.10959220363431856,0.6039215686274509,0.086447193010976,0.5263261507257542,0.6939215686274509,0.06463399171987551,0.7290196078431372,0.6754610157794895,0.2904771081896126&swatchOrder=0,1,2,3,4*/
+https://color.adobe.com/create/color-wheel/?base=2&rule=Complementary&selected=4&name=My%20Color%20Theme&mode=rgb&rgbvalues=0.2843137254901961,0.1284546921808576,0.12612843795236214,0.884313725490196,0.5738002097799203,0.5691656796946967,0.5843137254901961,0.3215686274509804,0.3176470588235294,0.09769706540334254,0.2843137254901961,0.1558390880877895,0.31764705882352945,0.5843137254901961,0.40072934834314244&swatchOrder=0,1,2,3,4
+*/

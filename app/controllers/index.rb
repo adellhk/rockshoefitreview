@@ -14,8 +14,6 @@ get '/' do
     erb :index
 end
 
-
-
 get '/logout' do
   session.clear
   redirect '/'
@@ -31,7 +29,8 @@ end
 
 post '/login' do
   user = User.find_by(email: params[:email])
-  if user.nil? # If email doesn't exist, try again.
+  # if user.nil? # If email doesn't exist, try again.
+  unless user # If email doesn't exist, try again.
     redirect '/login/again'
   else # If email exists, try to authenticate
     if user.authenticate(params[:password])

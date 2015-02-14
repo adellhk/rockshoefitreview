@@ -29,19 +29,14 @@ $(document).ready(function() {
 
   });
 
-  $('#searchResults').on('click', function(e){
+  $('#searchResults').on('click', 'a', function(e){
     e.preventDefault();
-    var path = $(e.target).attr('href');
+    var path = $(this).attr('href');
     $.ajax({
       url: path,
       type: 'get'
     }).done(function(serverData){
-      var shoePage = "<div id='shoe'><img src='" + serverData.image_url + "_Large.jpg'></div>"
-      console.log(serverData)
-
-      $('#shoePages').append(shoePage);
-
-
+      $('#shoePages').append(serverData);
     }).fail(function(){
       console.log('Failed')
     });

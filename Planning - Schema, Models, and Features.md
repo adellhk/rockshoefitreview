@@ -93,12 +93,19 @@
 
 
 to-do:
+2.13
+A user can revisit any page, such as a review, shoe, or search
+* Shaping up with Angular - Codeschool
+http://jsfiddle.net/8s75xp6g/10/
+* Controller Testing
+
 2.12
 A user starts to search and after three chars have been entered:
   A results Div is appended and slides up, with results in it.
     Results div has a 'banish' button
   As search is narrowed, results are grayed out.
   If a search is ever narrowed down to one result, the "Rock Shoe Size Review" button glows & clicking it or pressing enter will take you to that result's profile page partial.
+    A user will always have at least one result not grayed out.
 A user can click on a search result
   Page slides down, preserving search results, to display shoe's profile page partial.
 

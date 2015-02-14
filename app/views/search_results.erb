@@ -1,7 +1,7 @@
 <% @matches.each_with_index do |shoe, index| %>
     <div style="display: none; background-image: url('<%=shoe.image_url%>_Small.jpg')" class="results" id="result<%= shoe.id %>">
   <a href="shoes/<%= shoe.display_name %>">
-    <%= shoe.display_name %>
+    <span class="model-name"><%= shoe.model %></span>
   </a>
     </div>
 <% end %>
