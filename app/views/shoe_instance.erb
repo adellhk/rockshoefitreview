@@ -1,13 +1,23 @@
 <div class="shoe-instance">
-  <img src="../<%= @shoe.image_url %>_Large.jpg">
-  <span class="title"><%= @shoe.brand + " " + @shoe.model %></span>
-  <a href="/shoes/<%= @shoe.id %>/new_review">Write a new review for the <%= @shoe.brand + " " + @shoe.model %></a>
+  <div class="heading">
+    <div class="heading-img">
+    <img src="../<%= @shoe.image_url %>_Large.jpg">
+  </div>
+  <div class="heading-title">
+    <span class="title"><%= @shoe.display_name %></span>
+    <p><a href="/shoes/<%= @shoe.display_name %>/new_review">Write a new review for the <%= @shoe.brand + " " + @shoe.model %></a></p>
+    <div id="newReview" class="new-review" contenteditable="true" name="message">
+      Your review about the <%= @shoe.display_name %>...
+    </div>
+  </div>
+</div>
   <div class="reviews">
-  <% @shoe.reviews.each do |review| %>
-  <div class="review">
-  <p><%= review.updated_at %> <% author_name = User.find(review.author_id).username %><a href="../users/<%= author_name %>"><%= author_name %></a><br>
-  <%= review.message %></p>
-</div>
-  <% end %>
-</div>
+    <% @shoe.reviews.each do |review| %>
+    <div class="review">
+      <p><%= review.updated_at %> <% author_name = User.find(review.author_id).username %><a href="../users/<%= author_name %>"><%= author_name %></a>
+        <p><%= review.message %></p>
+      </p>
+    </div>
+    <% end %>
+  </div>
 </div>

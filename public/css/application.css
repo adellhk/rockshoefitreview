@@ -1,4 +1,6 @@
-html,
+html {
+  overflow-y: scroll;
+}
 body {
   font-family: sans-serif;
   text-align: center;
@@ -43,11 +45,11 @@ div.central {
   margin-left: -300px;
   width: 600px;
   text-align: center;
-  border: 3px double black;
+  /*border: 3px double black;*/
 }
 
 div#searchResults {
-  border: 1px solid black;
+  /*border: 1px solid black;*/
   background: yellow;
   position: relative;
 }
@@ -89,13 +91,6 @@ div#searchResults img {
   font-size: small;
 }
 
-#shoePages {
-  position: relative;
-  bottom: 0;
-  width: 90%;
-  height: 1px;
-  left: 5%;
-}
 
 #footer {
   position: absolute;
@@ -124,16 +119,73 @@ a:hover {
   font-family: 'LeagueGothicRegular';
   src: url(../../imgs/League-Gothic/LeagueGothic-Regular.otf);
 }
+div.shoe-pages {
+  position: relative;
+  width: 100%;
+  margin-top: 539px;
+}
+div.shoe-instance{
+  position: absolute;
+  margin: auto;
+  left: 5%;
+  width: 90%;
+}
+div.shoe-instance p {
+  text-align: left;
+  font-size: 12px;
+}
 div.shoe-instance span.title{
   text-shadow: 0px 1px 1px rgba(2,8,0,0.5);
   color: #2B4C62;
   font-family: 'LeagueGothicRegular';
-  font-size: 5em;
+  font-size: 4em;
   margin-top: 0; margin-bottom: 0;
   display: inline-block;
 }
 div.shoe-instance span.title:hover{
   color: rgba(8,38,2,1);
+}
+div.shoe-instance div.heading {
+  position: absolute;
+  text-align: left;
+  left: 30%;
+}
+div.shoe-instance div.heading-img img {
+  float: left;
+  display: block;
+  width: 25%;
+  /*border: 2px solid green;*/
+}
+div.shoe-instance div.heading-title {
+  float:left;
+  width: 73%;
+  margin-left: 1%;
+  /*border: 2px solid blue;*/
+  display: inline-block;
+}
+div.shoe-instance div.heading-img, div.heading-title{
+}
+div.shoe-instance div.heading div.new-review {
+  height: 0;
+  display: none;
+  border-radius: 10px;
+  border: 2px solid rgb(9,41,2);
+  color: gray;
+}
+div.shoe-instance div.reviews {
+  margin-top: 14%;
+  position: absolute;
+  min-height: 40em;
+}
+div.shoe-instance div.reviews div.review {
+  float: left;
+  margin: 1px;
+  width:24%;
+  display: inline-block;
+  border-radius: 5px;
+  border: 2px solid rgb(9,41,2);
+  height: 8em;
+  overflow: hidden;
 }
 .subtitle{
   text-shadow: 0px 1px 1px #1C9A16;
@@ -158,27 +210,12 @@ div.shoe-instance span.title:hover{
 #navbar a:hover{
   color: #BEB04B;
 }*/
-.review {
+/*.review {
   color: rgba(8,38,2,0.5);
-  margin:auto;
-  width:25%;
-  display: inline-block;
-  /*background: rgba(9, 41, 2, 0.6);*/
-  border-radius: 5px;
-  border: 2px solid rgb(9,41,2);
+  background: rgba(9, 41, 2, 0.6);
   margin-bottom: 3em;
-}
-div.shoe-instance {
-  width: 90%;
-  border: 1px solid black;
-}
-div.shoe-instance p {
-  text-align: left;
-  font-size: 12px;
-}
-div.shoe-instance img {
-  width:25%;
-}
+}*/
+
 .shoe_pane {
   position:relative;
   width: 10em;
@@ -216,6 +253,9 @@ div.shoe-instance img {
   border-radius: 5px;
 }
 
+div.shoe-instance {
+  -webkit-animation-duration: .4s;
+}
 /*MARSALA:
 marsala 955251
 dark red 482120
