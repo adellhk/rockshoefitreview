@@ -8,8 +8,8 @@ get '/reviews/new' do
 end
 # add a new reviews
 post '/reviews' do
-  Review.create(message: params[:message], shoe_id: session[:last_shoe_id], author_id:session[:user_id])
-  redirect "/shoes/#{session[:last_shoe_id]}"
+  shoe_id = Shoe.find_by(display_name: params[:shoeDisplayName]).id
+  Review.create(message: params[:message], shoe_id: shoe_id) #, author_id: session[:user_id])
 end
 # get a specific instance of reviews
 get '/reviews/:id' do

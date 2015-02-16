@@ -31,22 +31,17 @@ class User < ActiveRecord::Base
     Hash[shoes.zip(reviews)]
   end
 
-# validations
-# validates :username, :email, presence: true, uniqueness: true
-# validate :valid_email #, on: :create
+  # validations
+  validates :username, :email, presence: true, uniqueness: true
+  validate :valid_email #, on: :create
+  validate :valid_password
+
   def valid_email
     errors.add :email, "is invalid" unless self.email =~ /\A[\w+]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
   end
 
-  def display_errors
-    html = []
-    self.errors.messages.each_pair do |attribute, errors|
-      html << "<b>#{attribute}:</b><br>"
-      errors.each do |error| "error"
-        html << "#{error}<br>"
-      end
-    end
-    return html.join("")
+  def valid_password
+    errors.add :password, "must be at least eight characters" unless self.password.length >= 8
   end
 
 end

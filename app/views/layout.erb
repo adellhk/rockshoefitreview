@@ -12,15 +12,18 @@
   -->
   <link rel="stylesheet" href="/css/application.css">
   <link rel="stylesheet" href="/css/animate.css">
+  <link rel="stylesheet" href="/css/jquery-ui.min.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/jquery-ui.min.js"></script>
   <script src="/js/application.js"></script>
+  <script src="/js/login.js"></script>
 
  <title>Rock Shoe Fit Review</title>
 
 </head>
 <body>
-<div class="header"></div>
+<div class="header"><button id="newRegistration">Register Now</button><form id="login"><input type="text" name="email" placeholder="email"><input type="password" name="password" placeholder="password"><input type="submit" value="Login"></form><form id="register"><input type="text" name="email" placeholder="email"><input type="text" name="username" placeholder="username"><input type="password" name="password" placeholder="password"><input type="submit" value="Register"></form><button id="logout">Logout</button></div>
     <%= yield %>
 
 </body>

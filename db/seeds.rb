@@ -18,7 +18,7 @@ end
 
 def generate_users(num_users = 10)
   num_users.times do
-    User.create(username: Faker::Internet.user_name, email: Faker::Internet.email)
+    User.create(username: Faker::Internet.user_name, email: Faker::Internet.email, password: Faker::Internet.password)
   end
 end
 

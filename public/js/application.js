@@ -1,7 +1,7 @@
 $(document).ready(function() {
   animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 
-  function animate (element, animationName) {
+  animate = function (element, animationName) {
     $(element).addClass(animationName).one(animationEnd, function() {
       $(this).removeClass(animationName);
     });
@@ -9,6 +9,9 @@ $(document).ready(function() {
   animate($('.button'), "animated pulse");
 
   function shoeSearch(submitter) {
+    if ($('#searchResults').children().length != 0){
+      $('#searchResults').children().remove()
+    };
     $.ajax({
       url: '/shoesearch',
       type: 'get',
@@ -20,7 +23,7 @@ $(document).ready(function() {
         animate(result, "animated fadeInUp");
       });
     }).fail(function(){
-      console.log('Failed');
+      console.log('Search Failed');
     });
   }
 
@@ -44,8 +47,10 @@ $(document).ready(function() {
         $reviewForm.css({'display':"block"});
         $reviewForm.animate({'height': 250}, {duration: 1000}); // expands reviewForm; next line moves reviews downward.
         $('.reviews').animate({"margin-top": 400}, {duration: 1000});
+        $('#submitNewReview').css({'display':'block'});
       } else if ($reviewForm.css('display')==='block'){
         $reviewForm.css({'display':'none'});
+        $('#submitNewReview').css({'display':'none'});
         $('.reviews').animate({'margin-top': 160}, {duration: 1000});
         $reviewForm.css({'height': 0});
         console.log($reviewForm.css('height'));
@@ -70,15 +75,33 @@ $(document).ready(function() {
     if ($('.shoe-instance').length) {
       var $first = $('.shoe-instance').eq(0)
       $first.addClass("animated fadeOutUp");
-        setTimeout(function() {
+      setTimeout(function() {
         $first.remove();
       },400);
     }
     newShoe(path);
-    setTimeout(function() { //this is a bad hack for event delegation w/o assigning an id.
+    setTimeout(function() { //this is a bad hack for event delegation: http://api.jquery.com/deferred.then/
       addNewReviewListener();
       addNewReviewFormListener();
+      addSubmitNewReviewListener();
     },1000);
   });
+
+  function addSubmitNewReviewListener(){
+    $('#submitNewReview').on('click', function(e){
+      var payload = {};
+      payload.message = $('#newReview').text().trim();
+      payload.shoeDisplayName = $(this).attr('name');
+      $.ajax({
+        url: '/reviews',
+        type: 'post',
+        data: payload
+      }).done(function(){
+        alert('new review inserted!')
+      }).fail(function(){
+        console.log('Failed');
+      });
+  });
+  };
 
 });

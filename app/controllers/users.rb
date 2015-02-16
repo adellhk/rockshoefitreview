@@ -11,12 +11,12 @@ post '/users' do
   session[:errors] = nil
   user = User.create(username: params[:username], email: params[:email], password: params[:password])
   if user.errors.any?
-    session[:errors] = user.display_errors
-    redirect '/users/new' #<< partial (: invalid_user )
+    session[:errors] = user.errors
+    break
+    # redirect '/users/new' #<< partial (: invalid_user )
   elsif
     session[:user_id] = user.id
     session[:user_password] = user.password
-    redirect '/'
   end
 end
 # get a specific instance of users

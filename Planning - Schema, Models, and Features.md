@@ -93,6 +93,13 @@
 
 
 to-do:
+2.15
+Put login header logic based on session
+
+2.14
+Authentication, registration, authorization, profile page
+review CRUD
+
 2.13
 A user can revisit any page, such as a review, shoe, or search
 * Shaping up with Angular - Codeschool

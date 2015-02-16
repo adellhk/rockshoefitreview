@@ -11,10 +11,11 @@ end
 get '/' do
   @shoes = ["La Sportiva Solution", "La Sportiva Solution Women's", "La Sportiva Genius", "La Sportiva Testarossa", "Five Ten Team 5.10", "Five Ten Blackwing", "Five Ten Anasazi VCS", "Five Ten Dragon", "Evolv Shaman", "Scarpa Instinct VS", "Mad Rock Shark 2.0", "Tenaya Oasi"] # Shoe.all.map{|shoe| shoe.display_name} # hard-coding this saves about 50-60ms on index load time. Should I hardcode?
 
-    erb :index
+  erb :index
 end
 
 get '/logout' do
+  puts "="*100 + "\n in logout route"
   session.clear
   redirect '/'
 end
@@ -29,18 +30,21 @@ end
 
 post '/login' do
   user = User.find_by(email: params[:email])
-  # if user.nil? # If email doesn't exist, try again.
-  unless user # If email doesn't exist, try again.
-    redirect '/login/again'
-  else # If email exists, try to authenticate
-    if user.authenticate(params[:password])
-      session[:user_id] = user.id
-      session[:user_password] = user.password
-      redirect "/shoes"
-    else
-      redirect '/login/again'
-    end
+  # raise AuthError, "no such email registered" unless user
+  # puts "="*100+"\n #{user}"
+  if user
+    user.authenticate(params[:password])
+    session[:user_id] = user.id
+    session[:user_password] = user.password
+    return
+  else
+    400
   end
+end
+
+get '/logged_in' do
+  return 200 if session[:user_id]
+  return 400
 end
 
 # get '/register' do

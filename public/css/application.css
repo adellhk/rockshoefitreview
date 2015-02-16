@@ -36,7 +36,21 @@ div.header {
   width: 100%;
   position: relative;
 }
-
+div.header input, div.header #logout, div.header #register, div.header #login{
+  margin-top: 1%;
+  float: right;
+  margin-right: 1%;
+  display: flex;
+}
+div.header button#newRegistration {
+  float: left;
+  margin-top: 1.75%;
+  margin-left: 1%;
+}
+/*div.header input {
+  margin-right: 1%;
+}
+*/
 div.central {
   position: absolute;
   top: 50%;
@@ -171,6 +185,19 @@ div.shoe-instance div.heading div.new-review {
   border-radius: 10px;
   border: 2px solid rgb(9,41,2);
   color: gray;
+}
+div.shoe-instance div.heading div.heading-title div#submitNewReview {
+  border-radius: 5px;
+  border: 2px solid gray;
+  height: 16px;
+  width: 60px;
+  display: none;
+  margin-top: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+div.shoe-instance div.heading div.heading-title div#submitNewReview:hover {
+  border: 2px solid black;
 }
 div.shoe-instance div.reviews {
   margin-top: 14%;
