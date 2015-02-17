@@ -17,7 +17,6 @@ end
 get '/logout' do
   puts "="*100 + "\n in logout route"
   session.clear
-  redirect '/'
 end
 
 get '/login/?' do

@@ -52,6 +52,7 @@ $(document).ready(function() {
       type: 'get'
     })
     loggedOutHeader();
+    location.reload();
   });
 
   $('#newRegistration').on('click', function(){

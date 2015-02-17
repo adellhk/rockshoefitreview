@@ -1,15 +1,21 @@
 <div class="shoe-instance">
   <div class="heading">
     <div class="heading-img">
-    <img src="../<%= @shoe.image_url %>_Large.jpg">
+    <img src="../<%= @shoe.image_url %>_Small.jpg">
   </div>
   <div class="heading-title">
     <span class="title"><%= @shoe.display_name %></span>
     <p><a href="/shoes/<%= @shoe.display_name %>/new_review">Write a new review for the <%= @shoe.brand + " " + @shoe.model %></a></p>
-    <div id="newReview" class="new-review" contenteditable="true" name="message">
-      Your review about the <%= @shoe.display_name %>...
-    </div>
-    <div id='submitNewReview' name='<%= @shoe.display_name %>'>Submit</div>
+    <% if session[:user_id] %>
+      <div id="newReview" class="new-review" contenteditable="true" name="message">
+        Your review about the <%= @shoe.display_name %>...
+      </div>
+      <div id='submitNewReview' name='<%= @shoe.display_name %>'>Submit</div>
+    <% else %>
+      <div id="newReview" class="new-review" name="message">
+        Please login or register to post a new review.
+      </div>
+    <% end %>
   </div>
 </div>
   <div class="reviews">

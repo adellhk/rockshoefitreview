@@ -93,6 +93,13 @@
 
 
 to-do:
+2.16
+Conditional logic for new review and login header
+store queries in header
+user profiles
+conditional partials
+
+
 2.15
 Put login header logic based on session
 

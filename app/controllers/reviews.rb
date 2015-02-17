@@ -9,7 +9,7 @@ end
 # add a new reviews
 post '/reviews' do
   shoe_id = Shoe.find_by(display_name: params[:shoeDisplayName]).id
-  Review.create(message: params[:message], shoe_id: shoe_id) #, author_id: session[:user_id])
+  Review.create(message: params[:message], shoe_id: shoe_id, author_id: session[:user_id])
 end
 # get a specific instance of reviews
 get '/reviews/:id' do

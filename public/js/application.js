@@ -53,7 +53,6 @@ $(document).ready(function() {
         $('#submitNewReview').css({'display':'none'});
         $('.reviews').animate({'margin-top': 160}, {duration: 1000});
         $reviewForm.css({'height': 0});
-        console.log($reviewForm.css('height'));
       };
     });
   }
@@ -69,9 +68,7 @@ $(document).ready(function() {
     shoeSearch(this);
   });
 
-  $('#searchResults').on('click', 'a', function(e){
-    e.preventDefault();
-    var path = $(this).attr('href');
+  function loadShoeInstance(path){
     if ($('.shoe-instance').length) {
       var $first = $('.shoe-instance').eq(0)
       $first.addClass("animated fadeOutUp");
@@ -85,23 +82,32 @@ $(document).ready(function() {
       addNewReviewFormListener();
       addSubmitNewReviewListener();
     },1000);
+  };
+
+
+  $('#searchResults').on('click', 'a', function(e){
+    e.preventDefault();
+    var path = $(this).attr('href');
+    loadShoeInstance(path);
   });
 
   function addSubmitNewReviewListener(){
     $('#submitNewReview').on('click', function(e){
       var payload = {};
+      var $shoeDisplayName = $(this).attr('name');
       payload.message = $('#newReview').text().trim();
-      payload.shoeDisplayName = $(this).attr('name');
+      payload.shoeDisplayName = $shoeDisplayName;
       $.ajax({
         url: '/reviews',
         type: 'post',
         data: payload
       }).done(function(){
-        alert('new review inserted!')
+        console.log('new review inserted!')
+        loadShoeInstance("/shoes/"+$shoeDisplayName)
       }).fail(function(){
         console.log('Failed');
       });
-  });
+    });
   };
 
 });

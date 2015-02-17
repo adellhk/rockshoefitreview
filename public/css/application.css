@@ -155,6 +155,7 @@ div.shoe-instance span.title{
   font-size: 4em;
   margin-top: 0; margin-bottom: 0;
   display: inline-block;
+  width: 1000px;
 }
 div.shoe-instance span.title:hover{
   color: rgba(8,38,2,1);
