@@ -21,8 +21,10 @@ $(document).ready(function() {
       data: payload
     }).done(function(serverData){
       loggedInHeader();
+      console.log('login successful');
     }).fail(function(serverData) {
-      $('#login input').eq(0).val("Invalid :(");
+      $('#login input').eq(1).val("");
+      $('#login input').css({'border':'1px red solid'});
       animate($('#login input'), "animated shake");
     });
   });
