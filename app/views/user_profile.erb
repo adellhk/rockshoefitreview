@@ -1,14 +1,16 @@
-<div class="content">
-  <h1 class="title"><%= @user.username %></h1>
+<div class="user-profile">
+  <span class="title"><%= @user.username %></span>
+  <div class="reviews">
   <% @shoes_with_reviews.each_pair do |shoe, review| %>
   <div class="review">
     <a href="/shoes/<%= shoe.id %>">
-      <img class="thumbnail" src="/imgs/shoes/<%= shoe.image_path %>_Small.jpg">
+      <img class="thumbnail" src="/<%= shoe.image_url %>_Small.jpg">
       <%= shoe.brand + " " + shoe.model %>
     </a>
     <%= review.message %>
   </div>
   <% end %>
+</div>
 
 
 </div>

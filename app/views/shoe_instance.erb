@@ -21,7 +21,7 @@
   <div class="reviews">
     <% @shoe.reviews.each do |review| %>
     <div class="review">
-      <p><%= review.updated_at %> <% author_name = User.find(review.author_id).username %><a href="../users/<%= author_name %>"><%= author_name %></a>
+      <p><%= review.updated_at %> <% author_username = User.find(review.author_id).username %><a href="../users/<%= author_username %>"><%= author_username %></a>
         <p><%= review.message %></p>
       </p>
     </div>

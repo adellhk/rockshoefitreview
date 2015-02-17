@@ -21,7 +21,7 @@ post '/users' do
 end
 # get a specific instance of users
 get '/users/:username' do
-  @user = User.find_by(username:params[:username])
+  @user = User.find_by(username: params[:username])
   @shoes_with_reviews = @user.shoes_with_reviews(@user.id)
   erb :user_profile
 end

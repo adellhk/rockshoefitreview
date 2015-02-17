@@ -200,12 +200,12 @@ div.shoe-instance div.heading div.heading-title div#submitNewReview {
 div.shoe-instance div.heading div.heading-title div#submitNewReview:hover {
   border: 2px solid black;
 }
-div.shoe-instance div.reviews {
+div.shoe-instance div.reviews, div.user-profile div.reviews {
   margin-top: 14%;
   position: absolute;
   min-height: 40em;
 }
-div.shoe-instance div.reviews div.review {
+div.shoe-instance div.reviews div.review, div.user-profile div.reviews div.review {
   float: left;
   margin: 1px;
   width:24%;

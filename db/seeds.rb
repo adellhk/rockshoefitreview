@@ -16,9 +16,9 @@ def generate_shoes
 
 end
 
-def generate_users(num_users = 10)
+def generate_users(num_users = 25)
   num_users.times do
-    User.create(username: Faker::Internet.user_name, email: Faker::Internet.email, password: Faker::Internet.password)
+    User.create(username: Faker::Internet.user_name, email: Faker::Internet.email, password: Faker::Internet.password(9))
   end
 end
 

@@ -8,7 +8,7 @@ require 'rubygems'
 ENV['RACK_ENV'] ||= 'test'
 
 require File.expand_path("../../config/environment", __FILE__)
- 855169fbfdd4cc00491330c00fdba1ec03e7513a
+
 require 'shoulda-matchers'
 require 'rack/test'
 # require 'capybara'
