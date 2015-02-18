@@ -1,5 +1,7 @@
 require "rubygems"
 require "sinatra"
+require 'dotenv'
+Dotenv.load
 
 # require "net/http"
 # require "net/https"
@@ -12,8 +14,8 @@ enable :sessions
 set :session_secret, '*&(^B234' # ('a'..'z').to_a.sample(10).join
 
 before do
-  @client_id = "738338649613509"
-  @client_secret = "053a9af068666585fa9f4c862f4e24ba"
+  @client_id = ENV['FB_CLIENT_ID']
+  @client_secret = ENV['FB_CLIENT_SECRET']
 
   session[:oauth] ||= {}
 end
