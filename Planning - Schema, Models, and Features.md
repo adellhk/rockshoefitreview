@@ -93,6 +93,11 @@
 
 
 to-do:
+2.17
+TOMORROW: API!!
+CONTROLLER TESTING!!
+ask stu about using dotenv; currently broken for facebookoauth, probably because not in root directory.
+
 2.16
 Conditional logic for new review and login header
 store queries in header

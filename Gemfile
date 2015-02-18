@@ -18,6 +18,9 @@ gem 'thin'
 gem 'bcrypt'
 
 gem 'gravatarify', '~> 3.0.0'
+gem 'vacuum'
+gem 'dotenv-rails', :groups => [:development, :test]
+
 
 group :test do
   gem 'shoulda-matchers'
