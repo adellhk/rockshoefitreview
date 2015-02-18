@@ -1,13 +1,15 @@
 require "rubygems"
 require "sinatra"
 
-require "net/http"
-require "net/https"
-require "cgi"
+# require "net/http"
+# require "net/https"
+# require "cgi"
 
 require "json"
+require 'open-uri'
 
 enable :sessions
+set :session_secret, '*&(^B234' # ('a'..'z').to_a.sample(10).join
 
 before do
   @client_id = "738338649613509"
@@ -20,11 +22,13 @@ get "/" do
   if session[:oauth][:access_token].nil?
     erb :start
   else
-    http = Net::HTTP.new "graph.facebook.com", 443
-    request = Net::HTTP::Get.new "/me?access_token=#{session[:oauth][:access_token]}"
-    http.use_ssl = true
-    response = http.request request
-    @json = JSON.parse(response.body)
+    # http = Net::HTTP.new "graph.facebook.com", 443
+    # request = Net::HTTP::Get.new "/me?access_token=#{session[:oauth][:access_token]}"
+    # http.use_ssl = true
+    # response = http.request request
+    url = "https://graph.facebook.com/me?fields=id,name,email&access_token=#{session[:oauth][:access_token]}"
+    response = open(url).read
+    @json = JSON.parse(response)
 
     erb :ready
   end
@@ -43,12 +47,22 @@ get "/callback" do
   response = http.request request
 
   session[:oauth][:access_token] = CGI.parse(response.body)["access_token"][0]
+
+  # current_user = User.find_or_create_by(email: last_response["email"] -> https://graph.facebook.com/me?fields=id,name,email&access_token=#{access_token}
+  # session[:user_id] = current_user.id
+  # unless current_user.username
+  #   current_user.
+  #   redirect '/new_user'
   redirect "/"
 end
 
 get "/logout" do
   session[:oauth] = {}
   redirect "/"
+end
+
+get '/session' do
+  session.inspect
 end
 
 enable :inline_templates
