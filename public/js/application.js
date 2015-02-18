@@ -92,6 +92,7 @@ $(document).ready(function() {
 function addNewReviewFormListener(){
   $('.shoe-pages').on('focus', '#newReview, #newReviewTitle', (function(e){
     $(this).css({'color':'black'})
+    $(this).text("")
   })
   )};
 
@@ -134,6 +135,7 @@ function addNewReviewFormListener(){
       $(this).unbind("error").attr({'src':'/imgs/no-avatar.jpg'})
     })
   }
+
 
 
 });
