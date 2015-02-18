@@ -14,37 +14,34 @@ get '/' do
   erb :index
 end
 
-get '/logout' do
-  puts "="*100 + "\n in logout route"
-  session.clear
-end
 
-get '/login/?' do
-  erb :login
-end
 
-get '/login/again' do
-  erb :login_again
-end
+# get '/login/?' do
+#   erb :login
+# end
 
-post '/login' do
-  user = User.find_by(email: params[:email])
-  # raise AuthError, "no such email registered" unless user
-  # puts "="*100+"\n #{user}"
-  if user
-    user.authenticate(params[:password])
-    session[:user_id] = user.id
-    session[:user_password] = user.password
-    return
-  else
-    400
-  end
-end
+# get '/login/again' do
+#   erb :login_again
+# end
 
-get '/logged_in' do
-  return 200 if session[:user_id]
-  return 400
-end
+# post '/login' do
+#   user = User.find_by(email: params[:email])
+#   # raise AuthError, "no such email registered" unless user
+#   # puts "="*100+"\n #{user}"
+#   if user
+#     user.authenticate(params[:password])
+#     session[:user_id] = user.id
+#     session[:user_password] = user.password
+#     return
+#   else
+#     400
+#   end
+# end
+
+# get '/logged_in' do
+#   return 200 if session[:user_id]
+#   return 400
+# end
 
 # get '/register' do
 
