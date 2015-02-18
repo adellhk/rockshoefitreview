@@ -12,7 +12,6 @@ require 'open-uri'
 
 enable :sessions
 set :session_secret, '*&(^B234' # ('a'..'z').to_a.sample(10).join
-p ENV
 
 before do
   @client_id = ENV['FB_CLIENT_ID']
