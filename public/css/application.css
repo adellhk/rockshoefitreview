@@ -244,16 +244,18 @@ div.shoe-instance div.reviews div.review, div.user-profile div.reviews div.revie
   border: 2px solid rgb(9,41,2);
   height: 10em;
   overflow: hidden;
+  padding: 10px;
+  box-sizing: border-box;
 }
 div.review span.review-date {
   float: right;
   margin-right: 10px;
 }
 .subtitle{
-  text-shadow: 0px 1px 1px #955251;
+  text-shadow: 1px 1px 1px #955251;
   color: #482120;
   font-family: 'LeagueGothicRegular';
-  font-size: 2.5em;
+  font-size: 1.5em;
 }
 .subtitle:hover{
   color: #955251;

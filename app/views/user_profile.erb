@@ -6,11 +6,12 @@
   <div class="reviews">
     <% @shoes_with_reviews.each_pair do |shoe, review| %>
     <div class="review">
+    <span class='review-title'><%= shorten_string(review.title, 20) %></span> <span class='review-date'><%= parse_time(review.updated_at) %></span>
       <a href="/shoes/<%= shoe.display_name %>">
         <img class="thumbnail" src="/<%= shoe.image_url %>_Small.jpg">
         <span class="subtitle"><%= shoe.brand + " " + shoe.model %></span>
       </a>
-      <p><%= review.message %></p>
+      <p><%= shorten_string(review.message, 50) %></p>
     </div>
     <% end %>
   </div>

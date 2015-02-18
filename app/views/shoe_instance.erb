@@ -26,7 +26,7 @@
       <% author = User.find(review.author_id) %>
       <span class='review-title'><%= shorten_string(review.title, 20) %></span> <span class='review-date'><%= parse_time(review.updated_at) %></span>
       <p><a href="../users/<%= author.fb_id %>"><img class="thumbnail" src="http://graph.facebook.com/<%= author.fb_id %>/picture"><%= author.username %></a></p>
-        <p><%= review.message %></p>
+        <p><%= shorten_string(review.message, 120) %></p>
     </div>
     <% end %>
   </div>
