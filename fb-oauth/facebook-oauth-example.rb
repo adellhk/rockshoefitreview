@@ -20,9 +20,10 @@ before do
   session[:oauth] ||= {}
 end
 
-get "/" do
+get "/facebook" do
   if session[:oauth][:access_token].nil?
-    erb :start
+
+    redirect "/request"
   else
     # http = Net::HTTP.new "graph.facebook.com", 443
     # request = Net::HTTP::Get.new "/me?access_token=#{session[:oauth][:access_token]}"
@@ -32,23 +33,25 @@ get "/" do
     response = open(url).read
     @json = JSON.parse(response)
 
-    erb :ready
+    redirect '/'
   end
 end
 
 get "/request" do
-  redirect "https://graph.facebook.com/oauth/authorize?client_id=#{@client_id}&redirect_uri=http://localhost:4567/callback"
+  redirect "https://graph.facebook.com/oauth/authorize?client_id=#{@client_id}&redirect_uri=http://localhost:9393/callback"
 end
 
 get "/callback" do
   session[:oauth][:code] = params[:code]
 
-  http = Net::HTTP.new "graph.facebook.com", 443
-  request = Net::HTTP::Get.new "/oauth/access_token?client_id=#{@client_id}&redirect_uri=http://localhost:4567/callback&client_secret=#{@client_secret}&code=#{session[:oauth][:code]}"
-  http.use_ssl = true
-  response = http.request request
-
-  session[:oauth][:access_token] = CGI.parse(response.body)["access_token"][0]
+  # http = Net::HTTP.new "graph.facebook.com", 443
+  # request = Net::HTTP::Get.new "/oauth/access_token?client_id=#{@client_id}&redirect_uri=http://localhost:9393/callback&client_secret=#{@client_secret}&code=#{session[:oauth][:code]}"
+  # http.use_ssl = true
+  # response = http.request request
+  url = "https://graph.facebook.com/oauth/access_token?client_id=#{@client_id}&redirect_uri=http://localhost:9393/callback&client_secret=#{@client_secret}&code=#{session[:oauth][:code]}"
+  resonse = open(url).read
+  p JSON.parse(resonse)
+  session[:oauth][:access_token] = JSON.parse(response.body)["access_token"][0]
 
   # current_user = User.find_or_create_by(email: last_response["email"] -> https://graph.facebook.com/me?fields=id,name,email&access_token=#{access_token}
   # session[:user_id] = current_user.id
@@ -67,7 +70,6 @@ get '/session' do
   session.inspect
 end
 
-enable :inline_templates
 
 __END__
 

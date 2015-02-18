@@ -1,16 +1,19 @@
 <div class="user-profile">
-  <span class="title"><%= @user.username %></span>
-  <div class="reviews">
-  <% @shoes_with_reviews.each_pair do |shoe, review| %>
-  <div class="review">
-    <a href="/shoes/<%= shoe.id %>">
-      <img class="thumbnail" src="/<%= shoe.image_url %>_Small.jpg">
-      <%= shoe.brand + " " + shoe.model %>
-    </a>
-    <%= review.message %>
+  <div class='heading'>
+    <img class="profile-picture" src="http://graph.facebook.com/<%= @user.fb_id %>/picture">
+    <span class="title"><%= @user.username %></span>
   </div>
-  <% end %>
-</div>
+  <div class="reviews">
+    <% @shoes_with_reviews.each_pair do |shoe, review| %>
+    <div class="review">
+      <a href="/shoes/<%= shoe.display_name %>">
+        <img class="thumbnail" src="/<%= shoe.image_url %>_Small.jpg">
+        <span class="subtitle"><%= shoe.brand + " " + shoe.model %></span>
+      </a>
+      <p><%= review.message %></p>
+    </div>
+    <% end %>
+  </div>
 
 
 </div>
