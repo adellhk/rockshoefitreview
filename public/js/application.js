@@ -47,10 +47,10 @@ $(document).ready(function() {
       },1000);
     }
     newShoe(path);
-    bindWriteNewReviewAnchor();
-    addNewReviewFormListener();
-    bindSubmitNewReview();
   };
+  bindWriteNewReviewAnchor();
+  addNewReviewFormListener();
+  bindSubmitNewReview();
 
   function newShoe(shoePath){
     $.ajax({
@@ -58,6 +58,7 @@ $(document).ready(function() {
       type: 'get'
     }).done(function(serverData){
       $('#shoePages').append(serverData);
+      makeImagesSafe();
       animate($('.shoe-instance'), "animated fadeInUp");
     }).fail(function(){
       console.log('newShoe append Failed')
@@ -66,6 +67,7 @@ $(document).ready(function() {
 
   function bindWriteNewReviewAnchor(){
     $('.shoe-pages').on('click','.heading-title a', function (e){
+      console.log(e);
       e.preventDefault();
       var $reviewFormTitle = $('#newReviewTitle').eq(0);
       var $reviewForm = $('#newReview').eq(0);
@@ -85,12 +87,12 @@ $(document).ready(function() {
         $reviewForm.css({'height': 0});
       };
     });
-  }
+}
 
-  function addNewReviewFormListener(){
-    $('.shoe-pages').on('focus', '#newReview, #newReviewTitle', (function(e){
-      $(this).css({'color':'black'})
-    })
+function addNewReviewFormListener(){
+  $('.shoe-pages').on('focus', '#newReview, #newReviewTitle', (function(e){
+    $(this).css({'color':'black'})
+  })
   )};
 
   $('#searchResults').on('click', 'a', function(e){
@@ -125,5 +127,13 @@ $(document).ready(function() {
       });
     });
   };
+
+  function makeImagesSafe() {
+    $("img").unbind("error");
+    $("img").error(function(){
+      $(this).unbind("error").attr({'src':'/imgs/no-avatar.jpg'})
+    })
+  }
+
 
 });
