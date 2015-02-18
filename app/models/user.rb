@@ -32,9 +32,9 @@ class User < ActiveRecord::Base
   end
 
   # validations
-  validates :username, :email, presence: true, uniqueness: true
-  validate :valid_email #, on: :create
-  validate :valid_password
+  # validates :username, :email, presence: true, uniqueness: true
+  # validate :valid_email #, on: :create
+  # validate :valid_password
 
   def valid_email
     errors.add :email, "is invalid" unless self.email =~ /\A[\w+]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i

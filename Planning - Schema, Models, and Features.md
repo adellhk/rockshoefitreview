@@ -93,6 +93,14 @@
 
 
 to-do:
+2.18
+personalized greeting & header info
+Reviews are expandable. Reviews include thumbnail of author.
+Default picture for user w/o picture.
+Review Titles
+Smooth scroll
+link history
+
 2.17
 TOMORROW: API!!
 CONTROLLER TESTING!!

@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
   animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
 
   animate = function (element, animationName) {
@@ -6,6 +7,7 @@ $(document).ready(function() {
       $(this).removeClass(animationName);
     });
   }
+
   animate($('.button'), "animated pulse");
 
   function shoeSearch(submitter) {
@@ -27,6 +29,29 @@ $(document).ready(function() {
     });
   }
 
+  $('#shoeBar').submit(function(e){
+    e.preventDefault();
+    shoeSearch(this);
+  });
+
+  function loadShoeInstance(path){
+    $('html, body').animate({
+      scrollTop: $('#searchResults').offset().top
+    }, 2000);
+
+    if ($('.shoe-instance').length) {
+      var $first = $('.shoe-instance').eq(0)
+      $first.addClass("animated fadeOutUp");
+      setTimeout(function() {
+        $first.remove();
+      },1000);
+    }
+    newShoe(path);
+    bindWriteNewReviewAnchor();
+    addNewReviewFormListener();
+    bindSubmitNewReview();
+  };
+
   function newShoe(shoePath){
     $.ajax({
       url: shoePath,
@@ -39,51 +64,34 @@ $(document).ready(function() {
     });
   };
 
-  function addNewReviewListener(){
-    $('.heading').on('click','a', function (e){
+  function bindWriteNewReviewAnchor(){
+    $('.shoe-pages').on('click','.heading-title a', function (e){
       e.preventDefault();
+      var $reviewFormTitle = $('#newReviewTitle').eq(0);
       var $reviewForm = $('#newReview').eq(0);
       if ($reviewForm.css('display')==='none'){
-        $reviewForm.css({'display':"block"});
-        $reviewForm.animate({'height': 250}, {duration: 1000}); // expands reviewForm; next line moves reviews downward.
+        $reviewFormTitle.css({'display':'block'});
+        $reviewForm.css({'display':'block'});
+        $reviewFormTitle.css({'height':16})
+        $reviewForm.animate({'height': 230}, {duration: 1000}); // expands reviewForm; next line moves reviews downward.
         $('.reviews').animate({"margin-top": 400}, {duration: 1000});
         $('#submitNewReview').css({'display':'block'});
       } else if ($reviewForm.css('display')==='block'){
         $reviewForm.css({'display':'none'});
+        $reviewFormTitle.css({'display':'none'});
         $('#submitNewReview').css({'display':'none'});
         $('.reviews').animate({'margin-top': 160}, {duration: 1000});
+        $reviewFormTitle.css({'height':0});
         $reviewForm.css({'height': 0});
       };
     });
   }
 
   function addNewReviewFormListener(){
-    $('#newReview').focus(function(e){
-      $(this).css({'color':'black'});
-    });
-  };
-
-  $('#shoeBar').submit(function(e){
-    e.preventDefault();
-    shoeSearch(this);
-  });
-
-  function loadShoeInstance(path){
-    if ($('.shoe-instance').length) {
-      var $first = $('.shoe-instance').eq(0)
-      $first.addClass("animated fadeOutUp");
-      setTimeout(function() {
-        $first.remove();
-      },400);
-    }
-    newShoe(path);
-    setTimeout(function() { //this is a bad hack for event delegation: http://api.jquery.com/deferred.then/
-      addNewReviewListener();
-      addNewReviewFormListener();
-      addSubmitNewReviewListener();
-    },1000);
-  };
-
+    $('.shoe-pages').on('focus', '#newReview, #newReviewTitle', (function(e){
+      $(this).css({'color':'black'})
+    })
+  )};
 
   $('#searchResults').on('click', 'a', function(e){
     e.preventDefault();
@@ -91,10 +99,18 @@ $(document).ready(function() {
     loadShoeInstance(path);
   });
 
-  function addSubmitNewReviewListener(){
-    $('#submitNewReview').on('click', function(e){
+  $('.user-profiles').on('click', '.review a', function(e){
+    e.preventDefault();
+    var path = $(this).attr('href');
+    loadShoeInstance(path);
+  });
+
+  function bindSubmitNewReview(){
+    $('.shoe-pages').on('click', '#submitNewReview', function(e){
+      e.preventDefault();
       var payload = {};
       var $shoeDisplayName = $(this).attr('name');
+      payload.title = $('#newReviewTitle').text().trim();
       payload.message = $('#newReview').text().trim();
       payload.shoeDisplayName = $shoeDisplayName;
       $.ajax({
@@ -102,8 +118,8 @@ $(document).ready(function() {
         type: 'post',
         data: payload
       }).done(function(){
-        console.log('new review inserted!')
-        loadShoeInstance("/shoes/"+$shoeDisplayName)
+        console.log('new review inserted!');
+        loadShoeInstance("/shoes/"+$shoeDisplayName);
       }).fail(function(){
         console.log('Failed');
       });

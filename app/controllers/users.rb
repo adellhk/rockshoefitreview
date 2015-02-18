@@ -20,10 +20,10 @@ post '/users' do
   end
 end
 # get a specific instance of users
-get '/users/:username' do
-  @user = User.find_by(username: params[:username])
+get '/users/:fb_id' do
+  @user = User.find_by(fb_id: params[:fb_id])
   @shoes_with_reviews = @user.shoes_with_reviews(@user.id)
-  erb :user_profile
+  erb :user_profile, layout: false
 end
 # get a form to edit a specific instance of users
 get '/users/:id/edit' do

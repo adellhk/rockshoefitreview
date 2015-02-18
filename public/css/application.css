@@ -12,6 +12,23 @@ body {
   /*margin-top: 3em;*/
   min-height: auto;
 }
+div.header a.fb-button {
+  padding-top: 3px;
+  display: inline-block;
+  padding-bottom: 1px;
+  text-decoration: none;
+  background: white;
+  border-radius: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-top: 11px;
+  border: 1px solid gray;
+  float: right;
+  margin-right: 10px;
+}
+div.header a.fb-button:hover {
+  border: 1px solid pink;
+}
 th {
   text-align: left;
 }
@@ -138,6 +155,17 @@ div.shoe-pages {
   width: 100%;
   margin-top: 539px;
 }
+div.user-profiles {
+  position: relative;
+  width: 100%;
+  margin-top: 1300px;
+}
+div.user-profile {
+  position: absolute;
+  margin: auto;
+  left: 5%;
+  width: 90%;
+}
 div.shoe-instance{
   position: absolute;
   margin: auto;
@@ -146,10 +174,10 @@ div.shoe-instance{
 }
 div.shoe-instance p {
   text-align: left;
-  font-size: 12px;
+  font-size: 16px;
 }
-div.shoe-instance span.title{
-  text-shadow: 0px 1px 1px rgba(2,8,0,0.5);
+div.shoe-instance span.title, div.user-profile span.title{
+  text-shadow: 1px 1px 1px #6FB2E1;
   color: #2B4C62;
   font-family: 'LeagueGothicRegular';
   font-size: 4em;
@@ -157,10 +185,10 @@ div.shoe-instance span.title{
   display: inline-block;
   width: 1000px;
 }
-div.shoe-instance span.title:hover{
-  color: rgba(8,38,2,1);
-}
-div.shoe-instance div.heading {
+/*div.shoe-instance span.title:hover, div.user-profile span.title:hover {
+  color: #6FB2E1;
+}*/
+div.shoe-instance div.heading, div.user-profile div.heading {
   position: absolute;
   text-align: left;
   left: 30%;
@@ -180,7 +208,7 @@ div.shoe-instance div.heading-title {
 }
 div.shoe-instance div.heading-img, div.heading-title{
 }
-div.shoe-instance div.heading div.new-review {
+div.shoe-instance div.heading div.new-review, div.shoe-instance div.heading div.new-review-title {
   height: 0;
   display: none;
   border-radius: 10px;
@@ -204,6 +232,8 @@ div.shoe-instance div.reviews, div.user-profile div.reviews {
   margin-top: 14%;
   position: absolute;
   min-height: 40em;
+  width: 90%;
+  left: 5%;
 }
 div.shoe-instance div.reviews div.review, div.user-profile div.reviews div.review {
   float: left;
@@ -212,14 +242,21 @@ div.shoe-instance div.reviews div.review, div.user-profile div.reviews div.revie
   display: inline-block;
   border-radius: 5px;
   border: 2px solid rgb(9,41,2);
-  height: 8em;
+  height: 10em;
   overflow: hidden;
 }
+div.review span.review-date {
+  float: right;
+  margin-right: 10px;
+}
 .subtitle{
-  text-shadow: 0px 1px 1px #1C9A16;
-  color: #1C8B16;
+  text-shadow: 0px 1px 1px #955251;
+  color: #482120;
   font-family: 'LeagueGothicRegular';
-  font-size: 3em;
+  font-size: 2.5em;
+}
+.subtitle:hover{
+  color: #955251;
 }
 #navbar {
   margin: auto;
@@ -277,8 +314,9 @@ div.shoe-instance div.reviews div.review, div.user-profile div.reviews div.revie
 }
 
 .thumbnail {
-  width: 10%;
+  width: 15%;
   border-radius: 5px;
+  display: flex;
 }
 
 div.shoe-instance {
