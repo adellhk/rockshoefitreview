@@ -19,6 +19,7 @@ gem 'thin'
 gem 'gravatarify', '~> 3.0.0'
 gem 'vacuum'
 gem 'dotenv-rails', :groups => [:development, :test]
+gem 'dotenv'
 
 
 group :test do

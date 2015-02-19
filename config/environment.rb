@@ -21,7 +21,7 @@ require "sinatra/reloader" if development?
 require 'erb'
 require 'faker' if development?
 # require 'sinatra/partial'
-require 'dotenv'
+require 'dotenv' if devolpment?
 require 'time'
 
 Dotenv.load
