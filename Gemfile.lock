@@ -28,16 +28,13 @@ GEM
     daemons (1.1.9)
     diff-lcs (1.2.5)
     dotenv (1.0.2)
-    dotenv-rails (1.0.2)
-      dotenv (= 1.0.2)
-    eventmachine (1.0.6)
+    eventmachine (1.0.7)
     excon (0.44.2)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
     faker (1.4.3)
       i18n (~> 0.5)
     ffi (1.9.6)
-    gravatarify (3.0.0)
     hitimes (1.2.2)
     i18n (0.7.0)
     jeff (1.2.0)
@@ -120,10 +117,8 @@ DEPENDENCIES
   activesupport (~> 4.1)
   capybara
   dotenv
-  dotenv-rails
   factory_girl
   faker
-  gravatarify (~> 3.0.0)
   pg
   rack-test
   rake
