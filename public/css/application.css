@@ -25,6 +25,7 @@ div.header a.fb-button {
   border: 1px solid gray;
   float: right;
   margin-right: 10px;
+  margin-left: 10px;
 }
 div.header a.fb-button:hover {
   border: 1px solid pink;
