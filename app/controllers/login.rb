@@ -58,7 +58,3 @@ get "/fb_logout" do
   session.clear
   redirect "/"
 end
-
-get '/session' do
-  session.inspect
-end

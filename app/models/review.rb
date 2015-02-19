@@ -3,7 +3,4 @@ class Review < ActiveRecord::Base
   belongs_to :shoe
   has_many :votes
 
-  # def self.serve(shoe_id)
-  #   Shoe.find
-  # end
 end

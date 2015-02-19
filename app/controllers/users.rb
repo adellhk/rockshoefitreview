@@ -6,20 +6,6 @@ get '/users/new' do
 
   erb :new_user
 end
-# add a new users
-post '/users' do
-  session[:errors] = nil
-  user = User.create(username: params[:username], email: params[:email], password: params[:password])
-  # user = User.create(params[:user])
-  if user.errors.any?
-    session[:errors] = user.errors
-    break
-    # redirect '/users/new' #<< partial (: invalid_user )
-  elsif
-    session[:user_id] = user.id
-    session[:user_password] = user.password
-  end
-end
 # get a specific instance of users
 get '/users/:fb_id' do
   @user = User.find_by(fb_id: params[:fb_id])

@@ -15,7 +15,6 @@ gem 'rake'
 
 gem 'thin'
 
-gem 'bcrypt'
 
 gem 'gravatarify', '~> 3.0.0'
 gem 'vacuum'

@@ -1,11 +1,3 @@
-# get a list of comments
-get '/reviews' do
-end
-# get a form to add a new reviews
-get '/reviews/new' do
-
-  erb :new_review
-end
 # add a new reviews
 post '/reviews' do
   shoe_id = Shoe.find_by(display_name: params[:shoeDisplayName]).id
