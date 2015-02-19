@@ -92,7 +92,10 @@
 
 
 
-to-do:
+#to-do:
+2.19
+Get deployment on heroku working, especially oauth redirection.
+
 2.18
 remove dark code.
 make swirly button from this palette: http://www.pantone.com/images/COY/2015/pages-Main/Pantone_Introducing_Color_of_the_Year_Marsala_banner.jpg

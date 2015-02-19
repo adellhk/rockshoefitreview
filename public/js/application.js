@@ -59,6 +59,7 @@ $(document).ready(function() {
     }).done(function(serverData){
       $('#shoePages').append(serverData);
       makeImagesSafe();
+      $('#newReview, #newReviewTitle, #submitNewReview').hide();
       animate($('.shoe-instance'), "animated fadeInUp");
     }).fail(function(){
       console.log('newShoe append Failed')
@@ -69,25 +70,14 @@ $(document).ready(function() {
     $('.shoe-pages').on('click','.heading-title a', function (e){
       console.log(e);
       e.preventDefault();
-      var $reviewFormTitle = $('#newReviewTitle').eq(0);
-      var $reviewForm = $('#newReview').eq(0);
-      if ($reviewForm.css('display')==='none'){
-        $reviewFormTitle.css({'display':'block'});
-        $reviewForm.css({'display':'block'});
-        $reviewFormTitle.css({'height':16})
-        $reviewForm.animate({'height': 230}, {duration: 1000}); // expands reviewForm; next line moves reviews downward.
-        $('.reviews').animate({"margin-top": 400}, {duration: 1000});
-        $('#submitNewReview').css({'display':'block'});
-      } else if ($reviewForm.css('display')==='block'){
-        $reviewForm.css({'display':'none'});
-        $reviewFormTitle.css({'display':'none'});
-        $('#submitNewReview').css({'display':'none'});
-        $('.reviews').animate({'margin-top': 160}, {duration: 1000});
-        $reviewFormTitle.css({'height':0});
-        $reviewForm.css({'height': 0});
-      };
+      if ( $('#newReview').is(':hidden') ) {
+        $('#newReview, #newReviewTitle, #submitNewReview').slideDown();
+        $('#newReviewTitle').focus();
+      } else {
+        $('#newReview, #newReviewTitle, #submitNewReview').slideUp();
+      }
     });
-}
+  };
 
 function addNewReviewFormListener(){
   $('.shoe-pages').on('focus', '#newReview, #newReviewTitle', (function(e){

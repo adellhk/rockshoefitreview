@@ -221,11 +221,14 @@ div.shoe-instance div.heading-title {
 div.shoe-instance div.heading-img, div.heading-title{
 }
 div.shoe-instance div.heading div.new-review, div.shoe-instance div.heading div.new-review-title {
-  height: 0;
-  display: none;
+  height: 250px;
+  display: block;
   border-radius: 10px;
   border: 2px solid rgb(9,41,2);
   color: gray;
+}
+div.shoe-instance div.heading div.new-review-title {
+  height: 20px;
 }
 div.shoe-instance div.heading div.heading-title div#submitNewReview {
   border-radius: 5px;
