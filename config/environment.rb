@@ -19,8 +19,7 @@ require 'sinatra'
 require "sinatra/reloader" if development?
 
 require 'erb'
-require 'faker' if development?
-# require 'sinatra/partial'
+require 'faker'
 require 'dotenv' if development?
 require 'time'
 
