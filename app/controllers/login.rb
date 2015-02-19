@@ -55,7 +55,6 @@ get "/callback" do
 end
 
 get "/fb_logout" do
-  session[:oauth] = {}
   session.clear
   redirect "/"
 end

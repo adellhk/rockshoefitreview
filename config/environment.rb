@@ -27,6 +27,14 @@ require 'time'
 
 Dotenv.load
 
+Thread.new do
+sum = 0
+  while true do
+    sleep 0.12
+    sum += 1
+  end
+end
+
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 

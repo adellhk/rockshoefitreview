@@ -94,6 +94,8 @@
 
 to-do:
 2.18
+remove dark code.
+make swirly button from this palette: http://www.pantone.com/images/COY/2015/pages-Main/Pantone_Introducing_Color_of_the_Year_Marsala_banner.jpg
 personalized greeting & header info
 Reviews are expandable. Reviews include thumbnail of author.
 Default picture for user w/o picture.
@@ -102,9 +104,7 @@ Smooth scroll
 link history
 
 2.17
-TOMORROW: API!!
 CONTROLLER TESTING!!
-ask stu about using dotenv; currently broken for facebookoauth, probably because not in root directory.
 
 2.16
 Conditional logic for new review and login header

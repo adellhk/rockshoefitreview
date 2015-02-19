@@ -24,7 +24,7 @@
 
 </head>
 <body>
-<div class="header"><% if session['oauth'][:access_token] %><a class ='fb-button' href='/fb_logout'>facebook logout</a><% else %><a class='fb-button' href='/facebook'>facebook login</a><% end %></div>
+<div class="header"><% if session['oauth'][:access_token] %><%= erb :logged_in %><% else %><a class='fb-button' href='/facebook'>facebook login</a><% end %></div>
 
   <!-- <button id="newRegistration">Register Now</button><form id="login"><input type="text" name="email" placeholder="email"><input type="password" name="password" placeholder="password"><input type="submit" value="Login"></form><form id="register"><input type="text" name="email" placeholder="email"><input type="text" name="username" placeholder="username"><input type="password" name="password" placeholder="password"><input type="submit" value="Register"></form><button id="logout">Logout</button></div> -->
     <%= yield %>
