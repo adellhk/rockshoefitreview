@@ -21,10 +21,10 @@ require "sinatra/reloader" if development?
 require 'erb'
 require 'faker' if development?
 # require 'sinatra/partial'
-require 'dotenv' if devolpment?
+require 'dotenv' if development?
 require 'time'
 
-Dotenv.load
+Dotenv.load if development?
 
 Thread.new do
 sum = 0

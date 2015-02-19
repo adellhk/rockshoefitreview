@@ -15,11 +15,8 @@ gem 'rake'
 
 gem 'thin'
 
-
-gem 'gravatarify', '~> 3.0.0'
 gem 'vacuum'
-gem 'dotenv-rails', :groups => [:development, :test]
-gem 'dotenv'
+gem 'faker'
 
 
 group :test do
@@ -27,10 +24,10 @@ group :test do
   gem 'rack-test'
   gem 'rspec'
   gem 'capybara'
-  gem 'faker'
 end
 
 group :test, :development do
+	gem 'dotenv'
   gem 'rerun'
   gem 'shotgun'
   gem 'factory_girl'

@@ -119,6 +119,7 @@ DEPENDENCIES
   activerecord (~> 4.1)
   activesupport (~> 4.1)
   capybara
+  dotenv
   dotenv-rails
   factory_girl
   faker
