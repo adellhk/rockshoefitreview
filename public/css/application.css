@@ -161,15 +161,18 @@ a:hover {
   font-family: 'LeagueGothicRegular';
   src: url(../../imgs/League-Gothic/LeagueGothic-Regular.otf);
 }
-div.shoe-pages {
-  position: relative;
+div.shoe-pages {;
   width: 100%;
   margin-top: 2%;
+  border: 1px solid #955251;
+  position: relative;
+  margin: auto;
 }
 div.user-profiles {
   position: relative;
   width: 100%;
-  margin-top: 1300px;
+  /*min-height: 70em;*/
+  margin-top: 2%;
 }
 div.user-profile {
   position: absolute;
@@ -178,22 +181,23 @@ div.user-profile {
   width: 90%;
 }
 div.shoe-instance{
-  position: absolute;
+  position: relative;
   margin: auto;
-  left: 5%;
+  /* left: 5%; */
   width: 90%;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 div.shoe-instance p {
   text-align: left;
   font-size: 16px;
+  z-index: 5;
 }
 div.shoe-instance span.title, div.user-profile span.title{
   text-shadow: 1px 1px 1px #6FB2E1;
   color: #2B4C62;
   font-family: 'LeagueGothicRegular';
   font-size: 4em;
-  /* margin-top: 0; */ 
+  /* margin-top: 0; */
   /* margin-bottom: 0; */
   display: inline-block;
   /* width: 1000px; */
@@ -208,8 +212,7 @@ div.shoe-instance div.heading, div.user-profile div.heading {
   position: relative;
   /* margin-left: -25%; */
   width: 90%;
-  border: 5px solid black;
-  display: inline-block;
+  /* border: 5px solid black; */
   /* height: 100%; */
 }
 
@@ -224,29 +227,31 @@ div.shoe-instance div.heading-img img {
   /* float: right; */
   /* display: inline-block; */
   /* width: 25%; */
-  border: 2px solid green;
-  height: 90%;
+  /* border: 2px solid green; */
+  height: 8em;
   /* position: absolute; */
-  /* display: inline-block; */
+  display: inline-block;
 }
 div.shoe-instance div.heading-title {
   /* right: 0; */
   width: 49%;
   /* margin-left: 27%; */
-  border: 1px solid blue;
-  display: inline-block;
+  /* border: 1px solid blue; */
+  /* display: inline-block; */
   text-align: left;
   /* border: 1px solid black; */
-  /* position: absolute; */
+  position: static;
   /* margin-right: 0; */
+  z-index: 0;
 }
 div.shoe-instance div.heading-img, div.heading-title{
     display: inline-block;
     /* height: 100%; */
-    border: 1px solid pink;
-    /* position: absolute; */
+    /* border: 1px solid pink; */
+    position: static;
     width: 49%;
     bottom: 0;
+    float: left;
     text-align: right;
 }
 div.shoe-instance div.heading div.new-review, div.shoe-instance div.heading div.new-review-title {
@@ -277,17 +282,20 @@ div.shoe-instance div.reviews, div.user-profile div.reviews {
   position: relative;
   /* min-height: 40em; */
   width: 90%;
+  /* z-index: 0; */
   left: 5%;
+  /* border: 6px solid green; */
+  display: table;
 }
 div.shoe-instance div.reviews div.review, div.user-profile div.reviews div.review {
   /* float: left; */
   margin: 1px;
-  width:24%;
+  width: 32%;
   display: inline-block;
   border-radius: 5px;
   border: 2px solid rgb(9,41,2);
   height: 10em;
-  overflow: hidden;
+  overflow: overlay;
   padding: 10px;
   box-sizing: border-box;
 }
@@ -299,7 +307,9 @@ div.review span.review-date {
   text-shadow: 1px 1px 1px #955251;
   color: #482120;
   font-family: 'LeagueGothicRegular';
-  font-size: 1.5em;
+  font-size: 162%;
+  display: inline-block;
+  float: left;
 }
 .subtitle:hover{
   color: #955251;
@@ -363,6 +373,8 @@ div.review span.review-date {
   width: 15%;
   border-radius: 5px;
   display: flex;
+  display: inline-block;
+  float: left;
 }
 
 /*MARSALA:

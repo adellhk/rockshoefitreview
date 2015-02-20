@@ -9,7 +9,7 @@ $(document).ready(function() {
   function loadUserProfile(path){
      $('html, body').animate({
       scrollTop: $('.user-profiles').offset().top
-    }, 2000);
+    }, 800);
 
     if ($('.user-profile').length) {
       var $first = $('.user-profile').eq(0)

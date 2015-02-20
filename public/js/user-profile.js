@@ -9,7 +9,7 @@ $(document).ready(function() {
   function loadUserProfile(path){
      $('html, body').animate({
       scrollTop: $('.user-profiles').offset().top
-    }, 2000);
+    }, 800);
 
     if ($('.user-profile').length) {
       var $first = $('.user-profile').eq(0)
@@ -26,6 +26,7 @@ $(document).ready(function() {
       console.log('appending user-profile')
       $('.user-profiles').append(serverData);
       animate($('.user-profile'), "animated fadeInUp");
+      $('#userProfiles').css('min-height','70em'); // set page to be large enough to scroll one page-length to only show header.
     }).fail(function(){
       console.log('userProfile append Failed')
     });

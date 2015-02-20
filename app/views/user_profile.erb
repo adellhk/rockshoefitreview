@@ -11,7 +11,7 @@
         <img class="thumbnail" src="/<%= shoe.image_url %>_Small.jpg">
         <span class="subtitle"><%= shoe.brand + " " + shoe.model %></span>
       </a>
-      <p><%= shorten_string(review.message, 50) %></p>
+      <p class='review-body'><%= shorten_string(review.message, 50) %></p>
     </div>
     <% end %>
   </div>

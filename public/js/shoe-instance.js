@@ -2,8 +2,8 @@ $(document).ready(function(){
 
   loadShoeInstance = function(path){
     $('html, body').animate({
-      scrollTop: $('#searchResults').offset().top
-    }, 2000);
+      scrollTop: $('#shoePages').offset().top
+    }, 800);
 
     if ($('.shoe-instance').length) {
       var $first = $('.shoe-instance').eq(0)
