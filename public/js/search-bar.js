@@ -17,10 +17,8 @@ $(document).ready(function() {
       $(this).width($(this).width());
       $(this).css('background','none');
       $(this).text('');
-      var shoeIconsIndex = 0
-      loopCarousel = setInterval(function() {loadingCarousel(shoeIconsIndex)}, 1000);
     }, function() {
-      window.clearTimeout(loopCarousel);
+      window.clearInterval(shoeBarLoadingLoop);
       $(this).css('background', originalBackground);
       $(this).text(originalText);
     });
@@ -28,22 +26,23 @@ $(document).ready(function() {
   var shoeIcons = ['/imgs/shoe-icons/s1_64.png','/imgs/shoe-icons/s2_64.png','/imgs/shoe-icons/s3_64.png','/imgs/shoe-icons/s4_64.png','/imgs/shoe-icons/s5_64.png']
 
 
-  var loadingCarousel = function(shoeIconsIndex){
+  var shoeIconsIndex = 0
+  var shoeBarLoadingLoop = setInterval(function(){
+    console.log(shoeIconsIndex)
     console.log('image on deck is:'+shoeIcons[shoeIconsIndex])
-    $('a.button').css({'background-image':"url("+shoeIcons[shoeIconsIndex]+")"},{'background-repeat':'no-repeat'});
+    $('a.button').css({'background-image':"url("+shoeIcons[shoeIconsIndex]+")"});
     $('a.button').animate({
-    'background-position-x': '120%'
+      'background-position-x': '120%'
     }, {
-    duration: 1000,
-    complete: function() {
-    $(this).css({
-    'background-position-x': -100})
+      duration: 1000,
+      complete: function() {
+        $(this).css({
+          'background-position-x': 0})
+      }
+    })
     shoeIconsIndex = (shoeIconsIndex + 1)
     if (shoeIconsIndex === shoeIcons.length){shoeIconsIndex=0}
-    console.log(shoeIconsIndex)
-    }
-    })
-  };
+  }, 1000);
 
 
   shoeSearch = function(submission) {
