@@ -7,44 +7,41 @@ $(document).ready(function() {
       shoeSearch(term);
     }
   });
-
-  $('div.central a.button').hover(
-    function() {
-      // This could probably be a hash or object of original values.
-      originalBackground = $(this).css('background');
-      originalText = $(this).text();
-      $(this).height($(this).height());
-      $(this).width($(this).width());
-      $(this).css('background','none');
-      $(this).text('');
-      var shoeIconsIndex = 0
-      loopCarousel = setInterval(function() {loadingCarousel(shoeIconsIndex)}, 1000);
-    }, function() {
-      window.clearTimeout(loopCarousel);
-      $(this).css('background', originalBackground);
-      $(this).text(originalText);
-    });
-
   var shoeIcons = ['/imgs/shoe-icons/s1_64.png','/imgs/shoe-icons/s2_64.png','/imgs/shoe-icons/s3_64.png','/imgs/shoe-icons/s4_64.png','/imgs/shoe-icons/s5_64.png']
 
-
-  var loadingCarousel = function(shoeIconsIndex){
-    console.log('image on deck is:'+shoeIcons[shoeIconsIndex])
-    $('a.button').css({'background-image':"url("+shoeIcons[shoeIconsIndex]+")"},{'background-repeat':'no-repeat'});
-    $('a.button').animate({
-    'background-position-x': '120%'
-    }, {
-    duration: 1000,
-    complete: function() {
-    $(this).css({
-    'background-position-x': -100})
-    shoeIconsIndex = (shoeIconsIndex + 1)
-    if (shoeIconsIndex === shoeIcons.length){shoeIconsIndex=0}
-    console.log(shoeIconsIndex)
-    }
+  var doSomething = function(){
+    $.each(shoeIcons, function(index, pic){
+      console.log(pic)
     })
-  };
+  }
+  var $searchButton =  $('a.button')
+  $searchButton.mouseover( doSomething )
 
+
+
+  // $('div.central a.button').hover(
+  //   function() {
+  //     // This could probably be a hash or object of original values.
+  //     originalBackground = $(this).css('background');
+  //     originalText = $(this).text();
+  //     $(this).height($(this).height());
+  //     $(this).width($(this).width());
+  //     $(this).css('background','none');
+  //     $(this).text('');
+  //     loadingCarousel;
+  //   }, function() {
+  //     $(this).css('background', originalBackground);
+  //     $(this).text(originalText);
+  //   });
+
+
+  // var loadingCarousel = setInterval(function(index){
+  //   index = 0
+  //   console.log(index)
+  //   console.log('image on deck is:'+shoeIcons[index])
+  //   $('a.button').css('background-image',"url("+shoeIcons[index]+")")
+  //   index = (index + 1)
+  // }, 1000);
 
   shoeSearch = function(submission) {
     if ($('#searchResults').children().length != 0){

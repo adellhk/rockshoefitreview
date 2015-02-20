@@ -84,10 +84,14 @@ div.central a.button {
   border-radius: 32px;
   margin-bottom: 2%;
   border: 1px solid #955251;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
 }
 div.central a.button:hover {
-  box-shadow: 1px 1px 1px 1px #482120;
-  /*color: #E19291;*/
+  box-shadow: 1px 1px 3px 3px #482120;
+  background-repeat: no-repeat;
+  background-position-y: 50%;
 }
 
 div.header {
