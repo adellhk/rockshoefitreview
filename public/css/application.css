@@ -33,6 +33,14 @@ div.header a.fb-button:hover {
 th {
   text-align: left;
 }
+div.central {
+  position: relative;
+  margin: auto;
+  margin-top: 20%;
+  width: 600px;
+  text-align: center;
+  /*border: 3px double black;*/
+}
 div.central a.button {
   background: #955251;
   color: white;
@@ -81,16 +89,6 @@ div.header button#newRegistration {
   margin-right: 1%;
 }
 */
-div.central {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -200px;
-  margin-left: -300px;
-  width: 600px;
-  text-align: center;
-  /*border: 3px double black;*/
-}
 
 div#searchResults {
   /*border: 1px solid black;*/
