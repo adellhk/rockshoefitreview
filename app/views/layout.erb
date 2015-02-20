@@ -5,12 +5,18 @@
   <link rel="stylesheet" href="/css/application.css">
   <link rel="stylesheet" href="/css/animate.css">
   <link rel="stylesheet" href="/css/jquery-ui.min.css">
+  <link rel="stylesheet" href="/css/index.css">
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="/js/jquery-1.11.2.min.js"></script>
   <script src="/js/jquery-ui.min.js"></script>
   <script src="/js/application.js"></script>
   <script src="/js/user-profile.js"></script>
   <script src="/js/shoe-instance.js"></script>
+  <script>searchSuggestions = []
+  <% Shoe.all.each do |shoe|%>
+    searchSuggestions.push('<%= shoe.display_name %>', '<%= shoe.brand %>')
+    <% end %> </script>
+  <script src='/js/index.js'></script>
 
  <title>Rock Shoe Fit Review</title>
 

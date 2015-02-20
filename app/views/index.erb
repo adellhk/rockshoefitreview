@@ -2,7 +2,7 @@
   <a href="#" class="button">Rock Shoe Fit Review</a>
   <form id="shoeBar">
     <% shoe = @shoes.sample %>
-    <input type="text" id="shoeBarInput" placeholder="eg. <%= shoe %>" autocomplete="off" size="40" name="shoeBarInput">
+    <input type="text" id="shoeBarInput" autocomplete="off" size="40" name="shoeBarInput" value="eg. <%= shoe %>">
     <input type="submit" style="display: none">
   </form>
   <div id="searchResults"></div>

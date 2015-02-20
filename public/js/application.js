@@ -10,14 +10,20 @@ $(document).ready(function() {
 
   animate($('.button'), "animated pulse");
 
-  function shoeSearch(submitter) {
+  shoeSearch = function(submission) {
     if ($('#searchResults').children().length != 0){
       $('#searchResults').children().remove()
     };
+    // format search submission for passing to controller; handles autocomplete selection vs form input.
+    if (jQuery.type(submission) === "string"){
+      submission = 'shoeBarInput='+submission
+    }else{
+      submission = $(submission).serialize()
+    }
     $.ajax({
       url: '/shoesearch',
       type: 'get',
-      data: $(submitter).serialize()
+      data: submission
     }).done(function(serverData){
       $('#searchResults').append(serverData);
       $.each($('.results'), function( index, result){
@@ -32,6 +38,12 @@ $(document).ready(function() {
   $('#shoeBar').submit(function(e){
     e.preventDefault();
     shoeSearch(this);
+  });
+
+  $('#shoeBar input[type=text]').focus(function() {
+    $(this)
+      .select()
+      .css({'color':'black'})
   });
 
   $('div.central a.button').on('click', function(){

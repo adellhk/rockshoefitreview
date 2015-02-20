@@ -44,12 +44,12 @@ div.central {
 div.central a.button {
   background: #955251;
   color: white;
-  padding: 20px;
+  padding: 4.5%;
   text-decoration: none;
   display: inline-block;
-  font-size: 50px;
-  border-radius: 10px;
-  margin-bottom: 10px;
+  font-size: 300%;
+  border-radius: 32px;
+  margin-bottom: 1%;
 }
 div.central a.button:hover {
   box-shadow: 1px 1px 1px 1px #482120;
