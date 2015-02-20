@@ -95,10 +95,10 @@ Rock Shoe Fit Review
 
 to-do:
 2.19
-implement vacuum & amazon AWS
-Get deployment on heroku working, especially oauth redirection.
 Fix layout & positioning
+implement vacuum & amazon AWS
 Vertical Nav Scrollbar
+Get deployment on heroku working, especially oauth redirection.
 
 2.18
 remove dark code.
