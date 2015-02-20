@@ -12,11 +12,6 @@
   <script src="/js/application.js"></script>
   <script src="/js/user-profile.js"></script>
   <script src="/js/shoe-instance.js"></script>
-  <script>searchSuggestions = []
-  <% Shoe.all.each do |shoe|%>
-    searchSuggestions.push('<%= shoe.display_name %>', '<%= shoe.brand %>')
-    <% end %> </script>
-  <script src='/js/index.js'></script>
 
  <title>Rock Shoe Fit Review</title>
 
@@ -27,4 +22,9 @@
     <%= yield %>
 
 </body>
+  <script>searchSuggestions = []
+  <% Shoe.all.each do |shoe|%>
+    searchSuggestions.push('<%= shoe.display_name %>', '<%= shoe.brand %>')
+    <% end %> </script>
+  <script src='/js/search-bar.js'></script>
 </html>
