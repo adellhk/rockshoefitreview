@@ -3,9 +3,42 @@ html {
 }
 body {
   font-family: sans-serif;
-  text-align: center;
+  /* text-align: center; */
   padding: 0;
   margin: 0;
+}
+
+.vertical-navbar {
+    position: fixed;
+    right: 0;
+    top: 31%;
+    text-align: left;
+    background: #955251;
+    /* padding: 10px; */
+    border-radius: 3px;
+    width: 6%;
+    z-index: 8;
+}
+
+div.vertical-navbar li {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    /* padding: 5px; */
+    font-size: larger;
+}
+
+div.vertical-navbar img {
+    width: 100%;
+}
+
+div.vertical-navbar div {
+    padding: 5px;
+    border: 4px solid #482120;
+    border-radius: 4px;
+}
+
+div.vertical-navbar div:hover {
+    background: white;
 }
 .content {
   padding-top: 15%;

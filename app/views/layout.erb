@@ -12,12 +12,14 @@
   <script src="/js/application.js"></script>
   <script src="/js/user-profile.js"></script>
   <script src="/js/shoe-instance.js"></script>
+  <script src="/js/navbar.js"></script>
 
  <title>Rock Shoe Fit Review</title>
 
 </head>
 <body>
 <div class="header"><% if session['oauth'][:access_token] %><%= erb :_logged_in %><% else %><a class='fb-button' href='/facebook'>facebook login</a><% end %></div>
+<%= erb :_vertical_navbar %>
 
     <%= yield %>
 
