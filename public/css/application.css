@@ -36,7 +36,7 @@ th {
 div.central {
   position: relative;
   margin: auto;
-  margin-top: 20%;
+  margin-top: 15%;
   width: 50%;
   text-align: center;
   /*border: 3px double black;*/
@@ -50,6 +50,7 @@ div.central a.button {
   font-size: 300%;
   border-radius: 32px;
   margin-bottom: 2%;
+  border: 1px solid #955251;
 }
 div.central a.button:hover {
   box-shadow: 1px 1px 1px 1px #482120;
@@ -69,12 +70,16 @@ div.header img {
   border-radius: 5px;
   float: right;
 }
-div.header span {
+div.header a#username {
   float: right;
   margin: 10px;
   margin-top: 15px;
+  color: white;
 }
-div.header input, div.header #logout, div.header #register, div.header #login{
+div.header a#username:hover {
+   color: pink;
+}
+/*div.header input, div.header #logout, div.header #register, div.header #login{
   margin-top: 1%;
   float: right;
   margin-right: 1%;
@@ -84,7 +89,7 @@ div.header button#newRegistration {
   float: left;
   margin-top: 1.75%;
   margin-left: 1%;
-}
+}*/
 /*div.header input {
   margin-right: 1%;
 }
@@ -179,6 +184,9 @@ div.user-profile {
   margin: auto;
   left: 5%;
   width: 90%;
+}
+div.user-profile div.heading img.profile-picture {
+  border-radius: 5px;
 }
 div.shoe-instance{
   position: relative;

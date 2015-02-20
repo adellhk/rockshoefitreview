@@ -6,7 +6,7 @@ $(document).ready(function() {
     loadUserProfile(path);
   });
 
-  function loadUserProfile(path){
+  loadUserProfile = function(path){
      $('html, body').animate({
       scrollTop: $('.user-profiles').offset().top
     }, 800);

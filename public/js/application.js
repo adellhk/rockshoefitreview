@@ -47,7 +47,8 @@ $(document).ready(function() {
   });
 
   $('div.central a.button').on('click', function(){
-    shoeSearch('#shoeBar');
+    console.log('clicked on shoeBar');
+    shoeSearch($("#shoeBarInput").val());
   });
 
   $('#searchResults').on('click', 'a', function(e){
@@ -60,6 +61,12 @@ $(document).ready(function() {
     e.preventDefault();
     var path = $(this).attr('href');
     loadShoeInstance(path);
+  });
+
+  $(document).on('click', '.header a#username', function(e){
+    console.log('in #username')
+    e.preventDefault();
+    loadUserProfile($(this).attr('href'));
   });
 
 

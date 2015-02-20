@@ -1,1 +1,1 @@
-<a class ='fb-button' href='/fb_logout'>facebook logout</a><img src="http://graph.facebook.com/<%= User.find(session[:user_id]).fb_id %>/picture"><span><%= User.find(session[:user_id]).username %></span>
+<% current_user = User.find(session[:user_id]) %><a class ='fb-button' href='/fb_logout'>facebook logout</a><img src="http://graph.facebook.com/<%= current_user.fb_id %>/picture"><a href='/users/<%= current_user.fb_id %>' id='username'><%= current_user.username %></a>
