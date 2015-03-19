@@ -1,5 +1,5 @@
 # [Rock Shoe Fit Review](http://www.rockshoe.me/ "rockshoe.me")
-A website for rock climbers to leave reviews for rock climbing shoes, browse others' reviews, and receive fitment predictions for what shoes are likely to fit them (feature unimplemented).
+A [website](www.rockshoe.me) for rock climbers to leave reviews for rock climbing shoes, browse others' reviews, and receive fitment predictions for what shoes are likely to fit them (feature unimplemented).
 
 Planning below:
 # Schema
