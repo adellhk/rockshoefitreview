@@ -1,4 +1,7 @@
-Rock Shoe Fit Review
+# Rock Shoe Fit Review - www.rockshoe.me
+A website for rock climbers to leave reviews for rock climbing shoes, browse others' reviews, and receive fitment predictions for what shoes are likely to fit them (feature unimplemented).
+
+Planning below:
 # Schema
 
 #### Shoes
