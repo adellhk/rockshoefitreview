@@ -1,40 +1,15 @@
-server = 'http://localhost:3000/'
+var server = 'http://localhost:3000/'
 $(document).ready(function() {
 	console.log('loaded');
-	bindGoButton();
-	bindHiButton();
+	bindGradeConvertForm();
 });
 
-function bindGoButton() {
-	$('#GoButton').on('click', function(event) {
-		$('#MessageBox').text(requestConversion({input_grade: '5.11d'}))
+function bindGradeConvertForm() {
+	$('#gradeConvertForm').on('submit', function(event){
+		event.preventDefault();
+		payload = $(this).serialize();
+		requestConversion(payload);
 	});
-}
-
-function bindHiButton() {
-	$('#HiButton').on('click', function(event) {
-		requestHi();
-		// console.log(requestHi())
-		// $('#MessageBox').text(requestHi())
-	});
-}
-
-function requestHi() {
-	$.ajax({
-		url: server + 'hi',
-		type: 'GET',
-		dataType: 'JSON'
-	})
-	.done(function(serverData) {
-		console.log("successfully called 'requestHi'");
-		message = serverData.message;
-		return message; // this needs to be a promise
-	})
-	.fail(function(serverData) {
-		console.log("error "+serverData.responseText);
-		return serverData.responseText
-	});
-	
 }
 
 function requestConversion(payload) {
@@ -46,10 +21,14 @@ function requestConversion(payload) {
 	})
 	.done(function(serverData) {
 		console.log("success");
-		return serverData
+		updateConversionResults(serverData); //should be a promise. avoid cbh :)
 	})
 	.fail(function(serverData) {
 		console.log("error");
 		return 'failed'
 	})
+}
+
+function updateConversionResults(results) {
+	$('#conversionResults').text(results)
 }
