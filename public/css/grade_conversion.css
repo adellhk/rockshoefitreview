@@ -1,0 +1,19 @@
+body {
+	background: pink;
+	height: 100vh;
+}
+
+.centered {
+	text-align: center;
+	margin: auto;
+}
+
+.third-width {
+	width: 33%;
+}
+
+.vertical-centered {
+	position: relative;
+	top: 50%;
+  transform: translateY(-50%);
+}
