@@ -1,4 +1,5 @@
 var server = 'http://localhost:3000/'
+var server = 'https://climbing-grade-conversion-api.herokuapp.com/'
 $(document).ready(function() {
 	console.log('loaded');
 	bindGradeConvertForm();
@@ -30,5 +31,6 @@ function requestConversion(payload) {
 }
 
 function updateConversionResults(results) {
-	$('#conversionResults').text(results)
+		var message = 'French: '+results.french+','+' uk: '+results.uk+','+' australian: '+results.australian+','+' yds: '+results.yds;
+	$('#conversionResults').text(message)
 }
